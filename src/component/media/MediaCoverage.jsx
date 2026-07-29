@@ -1,65 +1,65 @@
-import React from 'react'
-import Heading from '../reuse/Heading'
-import blog1 from "../../assets/imgs/blog/blog.png"
-import MediaCard from '../reuse/MediaCard';
+import React, { useEffect, useState } from "react";
+import Heading from "../reuse/Heading";
+import MediaCard from "../reuse/MediaCard";
+import { getMediaCoverageApi } from "../../utils/frontApi";
 
 const MediaCoverage = () => {
-     const blogs = [
-        {
-          id: 1,
-          image: blog1,
-          date: "May 19, 2023",
-          author: "Mesbah",
-          comments: 'Media Coverage',
-          title: "Innovate and inspire daily to bring your brand to life with fresh, creative ideas that captivate and engage your audience.",
-        },
-        {
-          id: 2,
-          image: blog1,
-          date: "May 19, 2023",
-          author: "Mesbah",
-          comments: "Media Coverage",
-          title: "Innovate and inspire daily to bring your brand to life with fresh, creative ideas that captivate and engage your audience.",
-        },
-          {
-          id: 1,
-          image: blog1,
-          date: "May 19, 2023",
-          author: "Mesbah",
-          comments: 'Media Coverage',
-          title: "Innovate and inspire daily to bring your brand to life with fresh, creative ideas that captivate and engage your audience.",
-        },
-        {
-          id: 2,
-          image: blog1,
-          date: "May 19, 2023",
-          author: "Mesbah",
-          comments: "Media Coverage",
-          title: "Innovate and inspire daily to bring your brand to life with fresh, creative ideas that captivate and engage your audience.",
-        },
-      ];
+  const [media, setMedia] = useState([]);
+
+  useEffect(() => {
+    fetchMediaCoverage();
+  }, []);
+
+  const fetchMediaCoverage = async () => {
+    try {
+      const res = await getMediaCoverageApi();
+
+      if (res.data.success) {
+        setMedia(res.data.data);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
-     <div className='p-70 media white-container'>
-        <div className="custom-container ">
-              <Heading
-                                title="Media Coverage"
-                                // subtitle="Socials"
-                                titleclass="text-black"
-                            />
+    <div className="p-70 media white-container">
+      <div className="custom-container ">
+        <Heading
+          title="Media Coverage"
+          // subtitle="Socials"
+          titleclass="text-black"
+        />
 
-                                <div className="row mt-4">
-
-                   {blogs.map((item, index) => {
-                        return (
-                            <div className="col-lg-6" data-gsap key={index}>
-                            <MediaCard data={item} />
-                            </div>
-                        );
-                        })}
-                </div>
+        <div className="row mt-4">
+          {media.map((item, index) => {
+            return (
+              <div className="col-lg-6" data-gsap key={index}>
+                <MediaCard
+                  data={{
+                    image: item.image,
+                    date: new Date(item.publishedDate).toLocaleDateString(
+                      "en-US",
+                      {
+                        month: "long",
+                        day: "numeric",
+                        year: "numeric",
+                      },
+                    ),
+                    author: item.sourceName,
+                    comments: "Media Coverage",
+                    title: item.name,
+                    description: item.description,
+                    link: item.link,
+                  }}
+                />
+              </div>
+            );
+          })}
         </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default MediaCoverage
+export default MediaCoverage;

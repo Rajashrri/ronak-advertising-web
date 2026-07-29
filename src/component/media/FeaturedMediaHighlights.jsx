@@ -1,29 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Heading from "../reuse/Heading";
 import blog1 from "../../assets/imgs/blog/blog.png";
 import MediaCard from "../reuse/MediaCard";
+import { getFeaturedMediaApi } from "../../utils/frontApi";
 
 const FeaturedMediaHighlights = () => {
-  const blogs = [
-    {
-      id: 1,
-      image: blog1,
-      date: "May 19, 2023",
-      author: "Mesbah",
-      comments: "Media Coverage",
-      title:
-        "Innovate and inspire daily to bring your brand to life with fresh, creative ideas that captivate and engage your audience.",
-    },
-    {
-      id: 2,
-      image: blog1,
-      date: "May 19, 2023",
-      author: "Mesbah",
-      comments: "Media Coverage",
-      title:
-        "Innovate and inspire daily to bring your brand to life with fresh, creative ideas that captivate and engage your audience.",
-    },
-  ];
+  const [blogs, setBlogs] = useState([]);
+
+  useEffect(() => {
+    fetchFeaturedMedia();
+  }, []);
+
+  const fetchFeaturedMedia = async () => {
+    try {
+      const res = await getFeaturedMediaApi();
+
+      if (res.data.success) {
+        setBlogs(res.data.data);
+      }
+    } catch (error) {
+      console.error("Failed to fetch featured media:", error);
+    }
+  };
   return (
     <div className="p-70 media">
       <div className="custom-container">
@@ -37,7 +35,24 @@ const FeaturedMediaHighlights = () => {
           {blogs.map((item, index) => {
             return (
               <div className="col-lg-6" data-gsap key={index}>
-                <MediaCard data={item} />
+                <MediaCard
+                  data={{
+                    image: item.image,
+                    date: new Date(item.publishedDate).toLocaleDateString(
+                      "en-US",
+                      {
+                        month: "long",
+                        day: "numeric",
+                        year: "numeric",
+                      },
+                    ),
+                    author: item.sourceName,
+                    comments: "Media Coverage",
+                    title: item.name,
+                    description: item.description,
+                    link: item.link,
+                  }}
+                />
               </div>
             );
           })}

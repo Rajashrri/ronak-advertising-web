@@ -60,6 +60,20 @@ export const getTestimonialsApi = () => {
 export const getClientsApi = () => {
   return frontApi.get(`/clients`);
 };
+
+export const getFeaturedMediaApi = () => {
+  return frontApi.get("/featured-media");
+};
+
+export const getMediaCoverageApi = () => {
+  return frontApi.get("/media-coverage");
+};
+export const getArticlesApi = () => {
+  return frontApi.get("/articles");
+};
+
+
+
 // =============================
 // OPTIONAL ERROR HANDLER
 // =============================

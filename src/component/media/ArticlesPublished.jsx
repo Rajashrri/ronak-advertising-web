@@ -1,92 +1,66 @@
-import React from 'react'
-import Heading from '../reuse/Heading';
-import MediaCard from '../reuse/MediaCard';
-import blog1 from "../../assets/imgs/blog/blog.png"
+import React, { useEffect, useState } from "react";
+import Heading from "../reuse/Heading";
+import MediaCard from "../reuse/MediaCard";
+import { getArticlesApi } from "../../utils/frontApi";
 
 const ArticlesPublished = () => {
-   const blogs = [
-          {
-            id: 1,
-            image: blog1,
-            date: "May 19, 2023",
-             discription:"Web design is a powerful tool across many professions,",
-            author: "Mesbah",
-            comments: 'Media Coverage',
-            title: "Create  Innovate  Inspire  and bring your brand to life",
-            button: "Read More",
-          },
-          {
-            id: 2,
-            image: blog1,
-            date: "May 19, 2023",
-             discription:"Web design is a powerful tool across many professions,",
-            author: "Mesbah",
-            comments: "Media Coverage",
-            title: "Create  Innovate  Inspire  and bring your brand to life",
-            button: "Read More",
-          },  {
-            id: 1,
-            image: blog1,
-            date: "May 19, 2023",
-             discription:"Web design is a powerful tool across many professions,",
-            author: "Mesbah",
-            comments: 'Media Coverage',
-            title: "Create  Innovate  Inspire  and bring your brand to life",
-            button: "Read More",
-          },
-          {
-            id: 2,
-            image: blog1,
-            date: "May 19, 2023",
-             discription:"Web design is a powerful tool across many professions,",
-            author: "Mesbah",
-            comments: "Media Coverage",
-            title: "Create  Innovate  Inspire  and bring your brand to life",
-            button: "Read More",
-          },
-            {
-            id: 1,
-            image: blog1,
-            date: "May 19, 2023",
-             discription:"Web design is a powerful tool across many professions,",
-            author: "Mesbah",
-            comments: 'Media Coverage',
-            title: "Create  Innovate  Inspire  and bring your brand to life",
-            button: "Read More",
-          },
-          {
-            id: 2,
-            image: blog1,
-            date: "May 19, 2023",
-            discription:"Web design is a powerful tool across many professions,",
-            author: "Mesbah",
-            comments: "Media Coverage",
-            title: "Create  Innovate  Inspire  and bring your brand to life",
-            button: "Read More",
-          },
-        ];
+  const [articles, setArticles] = useState([]);
+
+  useEffect(() => {
+    fetchArticles();
+  }, []);
+
+  const fetchArticles = async () => {
+    try {
+      const res = await getArticlesApi();
+
+      if (res.data.success) {
+        setArticles(res.data.data);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
-     <div className='p-70 media'>
-        <div className="custom-container">
-              <Heading
-                                title="Articles Published"
-                                // subtitle="Socials"
-                                titleclass="text-black"
-                            />
+    <div className="p-70 media">
+      <div className="custom-container">
+        <Heading
+          title="Articles Published"
+          // subtitle="Socials"
+          titleclass="text-black"
+        />
 
-                                <div className="row mt-4">
-
-                   {blogs.map((item, index) => {
-                        return (
-                            <div className="col-lg-4 col-lg-6" data-gsap key={index}>
-                            <MediaCard data={item} />
-                            </div>
-                        );
-                        })}
-                </div>
+        <div className="row mt-4">
+          {articles.map((item, index) => {
+            return (
+              <div className="col-lg-4 col-lg-6" data-gsap key={index}>
+                <MediaCard
+                  data={{
+                    image: item.image,
+                    date: new Date(item.publishedDate).toLocaleDateString(
+                      "en-US",
+                      {
+                        month: "long",
+                        day: "numeric",
+                        year: "numeric",
+                      },
+                    ),
+                    author: item.sourceName,
+                    comments: "Articles",
+                    title: item.name,
+                    discription: item.briefIntro,
+                    link: item.articleLink,
+                    button: true,
+                  }}
+                />
+              </div>
+            );
+          })}
         </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default ArticlesPublished
+export default ArticlesPublished;

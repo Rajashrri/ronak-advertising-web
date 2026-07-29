@@ -62,7 +62,13 @@ const MediaCard = ({ data }) => {
 
       {data.button && (
         <div className="awrap">
-          <button className="btn2">
+          <button
+      className="btn2"
+      onClick={(e) => {
+        e.preventDefault();
+        window.open(data.link, "_blank", "noopener,noreferrer");
+      }}
+    >
             Read More
             <svg
               width="13"
