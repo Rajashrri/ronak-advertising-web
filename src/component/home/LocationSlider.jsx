@@ -1,7 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay } from "swiper/modules";
 import { useEffect, useState } from "react";
-
+import { getLocationsApi } from "../../utils/frontApi";
 import "swiper/css";
 import "swiper/css/pagination";
 
@@ -14,28 +14,33 @@ import img6 from "../../assets/imgs/location/2.png";
 import img7 from "../../assets/imgs/location/3.png";
 import img8 from "../../assets/imgs/location/4.png";
 
-const locations = [
-  { title: "PANVEL", image: img1 },
-  { title: "KHARGHAR", image: img2 },
-  { title: "SANPADA", image: img3 },
-  { title: "JUINAGAR", image: img4 },
-  { title: "NERUL", image: img5 },
-  { title: "VASHI", image: img6 },
-  { title: "BELAPUR", image: img7 },
-  { title: "AIROLI", image: img8 },
-];
-
 export default function LocationSlider() {
+  const [locations, setLocations] = useState([]);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 1024);
 
   useEffect(() => {
+    fetchLocations();
+
     const handleResize = () => {
       setIsMobile(window.innerWidth < 1024);
     };
 
     window.addEventListener("resize", handleResize);
+
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  const fetchLocations = async () => {
+    try {
+      const res = await getLocationsApi();
+
+      if (res.data.success) {
+        setLocations(res.data.data);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
 
   // Group by 4 for desktop
   const desktopSlides = [];
@@ -62,26 +67,25 @@ export default function LocationSlider() {
             ? locations.map((item, index) => (
                 <SwiperSlide key={index}>
                   <div className="location-grid">
-                    
                     <div className="location-card">
-                        <div className="locadeta">
-                          <div className="locacrad">
-                            <h4>70+</h4>
-                            <p>billboards</p>
-                          </div>
-                          <div className="locacrad">
-                            <h4>10+</h4>
-                            <p>Brands in Last Year</p>
-                          </div>
-                          <div className="locacrad">
-                            <h4>5Lakh+</h4>
-                            <p>Total eye balls in a day</p>
-                          </div>
+                      <div className="locadeta">
+                        <div className="locacrad">
+                          <h4>70+</h4>
+                          <p>billboards</p>
                         </div>
-                      
-                      <img src={item.image} alt={item.title} />
+                        <div className="locacrad">
+                          <h4>10+</h4>
+                          <p>Brands in Last Year</p>
+                        </div>
+                        <div className="locacrad">
+                          <h4>5Lakh+</h4>
+                          <p>Total eye balls in a day</p>
+                        </div>
+                      </div>
+
+                      <img src={item.image} alt={item.locationName} />
                       <div className="overlay"></div>
-                      <h3>{item.title}</h3>
+                      <h3>{item.locationName}</h3>
                     </div>
                   </div>
                 </SwiperSlide>
@@ -105,9 +109,9 @@ export default function LocationSlider() {
                             <p>Total eye balls in a day</p>
                           </div>
                         </div>
-                        <img src={item.image} alt={item.title} />
+                        <img src={item.image} alt={item.locationName} />
                         <div className="overlay"></div>
-                        <h3>{item.title}</h3>
+                        <h3>{item.locationName}</h3>
                       </div>
                     ))}
                   </div>

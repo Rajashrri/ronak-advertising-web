@@ -72,7 +72,9 @@ export const getArticlesApi = () => {
   return frontApi.get("/articles");
 };
 
-
+export const getLocationsApi = () => {
+  return frontApi.get("/locations");
+};
 
 // =============================
 // OPTIONAL ERROR HANDLER
