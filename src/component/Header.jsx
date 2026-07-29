@@ -195,7 +195,7 @@ const Header = () => {
                 </div>
               </li>
               <li>
-                <a href="/blog" onClick={() => setMenuOpen(false)}>
+                <a href="/blogs" onClick={() => setMenuOpen(false)}>
                   Blog
                 </a>
               </li>
