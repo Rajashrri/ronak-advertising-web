@@ -91,9 +91,9 @@ const Casedata = ({ setCaseName }) => {
         setCaseStudy(res.data.data);
         setRelatedCases(res.data.relatedCaseStudies || []);
 
-      if (setCaseName) {
-        setCaseName(res.data.data.name);
-      }
+        if (setCaseName) {
+          setCaseName(res.data.data.name);
+        }
       }
     } catch (err) {
       console.log(err);
@@ -104,64 +104,52 @@ const Casedata = ({ setCaseName }) => {
 
   return (
     <>
+      <Helmet>
+        <title>
+          {caseStudy?.metaTitle?.trim()
+            ? `${caseStudy.metaTitle} | Case Study | Ronak Advertising`
+            : `${caseStudy?.name} | Case Study | Ronak Advertising`}
+        </title>
 
-    <Helmet>
-    <title>
-      {caseStudy?.metaTitle?.trim()
-        ? `${caseStudy.metaTitle} | Case Study | Ronak Advertising`
-        : `${caseStudy?.name} | Case Study | Ronak Advertising`}
-    </title>
+        <meta
+          name="description"
+          content={
+            caseStudy?.metaDescription?.trim()
+              ? caseStudy.metaDescription
+              : caseStudy?.briefIntro || ""
+          }
+        />
 
-    <meta
-      name="description"
-      content={
-        caseStudy?.metaDescription?.trim()
-          ? caseStudy.metaDescription
-          : caseStudy?.briefIntro || ""
-      }
-    />
+        <meta name="keywords" content={caseStudy?.metaKeywords || ""} />
 
-    <meta
-      name="keywords"
-      content={caseStudy?.metaKeywords || ""}
-    />
+        <meta
+          property="og:title"
+          content={
+            caseStudy?.metaTitle?.trim()
+              ? caseStudy.metaTitle
+              : `${caseStudy?.name} | Case Study | Ronak Advertising`
+          }
+        />
 
-    <meta
-      property="og:title"
-      content={
-        caseStudy?.metaTitle?.trim()
-          ? caseStudy.metaTitle
-          : `${caseStudy?.name} | Case Study | Ronak Advertising`
-      }
-    />
+        <meta
+          property="og:description"
+          content={
+            caseStudy?.metaDescription?.trim()
+              ? caseStudy.metaDescription
+              : caseStudy?.briefIntro || ""
+          }
+        />
 
-    <meta
-      property="og:description"
-      content={
-        caseStudy?.metaDescription?.trim()
-          ? caseStudy.metaDescription
-          : caseStudy?.briefIntro || ""
-      }
-    />
+        <meta property="og:image" content={caseStudy?.featuredImage || ""} />
 
-    <meta
-      property="og:image"
-      content={caseStudy?.featuredImage || ""}
-    />
+        <meta property="og:url" content={window.location.href} />
 
-    <meta
-      property="og:url"
-      content={window.location.href}
-    />
+        <meta property="og:type" content="article" />
 
-    <meta property="og:type" content="article" />
-
-    {caseStudy?.schemaCode && (
-      <script type="application/ld+json">
-        {caseStudy.schemaCode}
-      </script>
-    )}
-  </Helmet>
+        {caseStudy?.schemaCode && (
+          <script type="application/ld+json">{caseStudy.schemaCode}</script>
+        )}
+      </Helmet>
       <div className="p-70">
         <div className="custom-container blog-container1">
           <h1 data-gsap>{caseStudy.name}</h1>

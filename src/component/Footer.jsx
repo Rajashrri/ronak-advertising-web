@@ -1,21 +1,87 @@
-import React from 'react'
-import footer from "../assets/imgs/footer-logo.png"
+import React from "react";
+import footer from "../assets/imgs/footer-logo.png";
+import { useState } from "react";
+import { subscribeApi } from "../utils/frontApi";
+import { useNavigate } from "react-router-dom";
 
 const Footer = () => {
+  const [email, setEmail] = useState("");
+  const [emailError, setEmailError] = useState("");
+
+  const validateEmail = (email) => {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  };
+
+  const [loading, setLoading] = useState(false);
+  const navigate = useNavigate();
+
+  const handleSubscribe = async () => {
+    setEmailError("");
+
+    if (!email.trim()) {
+      setEmailError("Email is required");
+      return;
+    }
+
+    if (!validateEmail(email)) {
+      setEmailError("Please enter a valid email address");
+      return;
+    }
+
+    try {
+      setLoading(true);
+
+      const res = await subscribeApi({ email });
+
+      if (res.data.success) {
+        setEmail("");
+        navigate("/thank-you");
+      }
+    } catch (err) {
+      setEmailError(err.response?.data?.message || "Something went wrong");
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
-    <div className='footer'>
+    <div className="footer">
       <div className="custom-container curve">
         <div className="subscrob">
-            <h1 data-gsap>Subscribe <span>Newsletter</span></h1>
-            <p data-gsap>Business consulting services can range from strategy develo financial planning, marketing, human resources management</p>
-                <div data-gsap className="input">
-                        <input type="text" placeholder='Your E-mail' />
-                        <button>
-                            Subscribe
-                        </button>
-                      </div>
-        </div>
+          <h1 data-gsap>
+            Subscribe <span>Newsletter</span>
+          </h1>
+          <p data-gsap>
+            Business consulting services can range from strategy develo
+            financial planning, marketing, human resources management
+          </p>
+          <div data-gsap className="input">
+            <input
+              type="email"
+              placeholder="Your E-mail"
+              value={email}
+              onChange={(e) => {
+                setEmail(e.target.value);
+                setEmailError("");
+              }}
+            />
 
+            {emailError && (
+              <p
+                style={{
+                  color: "#ff4d4f",
+                  fontSize: "14px",
+                  marginTop: "6px",
+                }}
+              >
+                {emailError}
+              </p>
+            )}
+            <button onClick={handleSubscribe} disabled={loading}>
+              {loading ? "Subscribing..." : "Subscribe"}
+            </button>
+          </div>
+        </div>
       </div>
       <div className="footer-container">
         <div className="row">
@@ -28,13 +94,27 @@ const Footer = () => {
             <div className="footerlist">
               <h3>Quick Link</h3>
               <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/about">About us</a></li>
-                <li><a href="/location">Locations</a></li>
-                <li><a href="/blogs">Blog</a></li>
-                <li><a href="/media">Media</a></li>
-                <li><a href="/case-study">Case Studies</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li>
+                  <a href="/">Home</a>
+                </li>
+                <li>
+                  <a href="/about">About us</a>
+                </li>
+                <li>
+                  <a href="/location">Locations</a>
+                </li>
+                <li>
+                  <a href="/blogs">Blog</a>
+                </li>
+                <li>
+                  <a href="/media">Media</a>
+                </li>
+                <li>
+                  <a href="/case-study">Case Studies</a>
+                </li>
+                <li>
+                  <a href="/contact">Contact</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -42,92 +122,177 @@ const Footer = () => {
             <div className="footerlist">
               <h3>Contact Info</h3>
               <div className="locationcard">
-                  <div className="logo">
-                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M15.9688 12.1562L15.2188 15.3125C15.125 15.7812 14.75 16.0938 14.2812 16.0938C6.40625 16.0625 0 9.65625 0 1.78125C0 1.3125 0.28125 0.9375 0.75 0.84375L3.90625 0.09375C4.34375 0 4.8125 0.25 5 0.65625L6.46875 4.0625C6.625 4.46875 6.53125 4.9375 6.1875 5.1875L4.5 6.5625C5.5625 8.71875 7.3125 10.4688 9.5 11.5312L10.875 9.84375C11.125 9.53125 11.5938 9.40625 12 9.5625L15.4062 11.0312C15.8125 11.25 16.0625 11.7188 15.9688 12.1562Z" fill="#DD2B1C"/>
-                    </svg>
-                  </div>
-                  <div>
-
+                <div className="logo">
+                  <svg
+                    width="17"
+                    height="17"
+                    viewBox="0 0 17 17"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M15.9688 12.1562L15.2188 15.3125C15.125 15.7812 14.75 16.0938 14.2812 16.0938C6.40625 16.0625 0 9.65625 0 1.78125C0 1.3125 0.28125 0.9375 0.75 0.84375L3.90625 0.09375C4.34375 0 4.8125 0.25 5 0.65625L6.46875 4.0625C6.625 4.46875 6.53125 4.9375 6.1875 5.1875L4.5 6.5625C5.5625 8.71875 7.3125 10.4688 9.5 11.5312L10.875 9.84375C11.125 9.53125 11.5938 9.40625 12 9.5625L15.4062 11.0312C15.8125 11.25 16.0625 11.7188 15.9688 12.1562Z"
+                      fill="#DD2B1C"
+                    />
+                  </svg>
+                </div>
+                <div>
                   <p>Phone Number</p>
                   <a href="#!">+91 22-49694802</a> <br />
                   <a href="#!">+91 22-20870060</a>
-                  </div>
+                </div>
               </div>
-                <div className="locationcard">
-                  <div className="logo">
-                    <svg width="16" height="12" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M14.5 0C15.3125 0 16 0.6875 16 1.5C16 2 15.75 2.4375 15.375 2.71875L8.59375 7.8125C8.21875 8.09375 7.75 8.09375 7.375 7.8125L0.59375 2.71875C0.21875 2.4375 0 2 0 1.5C0 0.6875 0.65625 0 1.5 0H14.5ZM6.78125 8.625C7.5 9.15625 8.46875 9.15625 9.1875 8.625L16 3.5V10C16 11.125 15.0938 12 14 12H2C0.875 12 0 11.125 0 10V3.5L6.78125 8.625Z" fill="#DD2B1C"/>
+              <div className="locationcard">
+                <div className="logo">
+                  <svg
+                    width="16"
+                    height="12"
+                    viewBox="0 0 16 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M14.5 0C15.3125 0 16 0.6875 16 1.5C16 2 15.75 2.4375 15.375 2.71875L8.59375 7.8125C8.21875 8.09375 7.75 8.09375 7.375 7.8125L0.59375 2.71875C0.21875 2.4375 0 2 0 1.5C0 0.6875 0.65625 0 1.5 0H14.5ZM6.78125 8.625C7.5 9.15625 8.46875 9.15625 9.1875 8.625L16 3.5V10C16 11.125 15.0938 12 14 12H2C0.875 12 0 11.125 0 10V3.5L6.78125 8.625Z"
+                      fill="#DD2B1C"
+                    />
                   </svg>
-                  </div>
-                  <div>
-
+                </div>
+                <div>
                   <p>Email</p>
                   <a href="#!">info@ronakadvertising.com </a> <br />
                   <a href="#!">ronak.advt@gmail.com</a>
-                  </div>
+                </div>
               </div>
             </div>
           </div>
           <div className="col-lg-3" data-gsap>
-               <div className="footerlist">
+            <div className="footerlist">
               <h3>Location</h3>
               <div className="locationcard">
-                  <div className="logo">
-                    <svg width="11" height="15" viewBox="0 0 11 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M4.59375 13.6719C3.17188 11.8945 0 7.65625 0 5.25C0 2.35156 2.32422 0 5.25 0C8.14844 0 10.5 2.35156 10.5 5.25C10.5 7.65625 7.30078 11.8945 5.87891 13.6719C5.55078 14.082 4.92188 14.082 4.59375 13.6719ZM5.25 7C6.20703 7 7 6.23438 7 5.25C7 4.29297 6.20703 3.5 5.25 3.5C4.26562 3.5 3.5 4.29297 3.5 5.25C3.5 6.23438 4.26562 7 5.25 7Z" fill="#DD2B1C"/>
-                    </svg>
-
-                  </div>
-                  <div>
-
+                <div className="logo">
+                  <svg
+                    width="11"
+                    height="15"
+                    viewBox="0 0 11 15"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M4.59375 13.6719C3.17188 11.8945 0 7.65625 0 5.25C0 2.35156 2.32422 0 5.25 0C8.14844 0 10.5 2.35156 10.5 5.25C10.5 7.65625 7.30078 11.8945 5.87891 13.6719C5.55078 14.082 4.92188 14.082 4.59375 13.6719ZM5.25 7C6.20703 7 7 6.23438 7 5.25C7 4.29297 6.20703 3.5 5.25 3.5C4.26562 3.5 3.5 4.29297 3.5 5.25C3.5 6.23438 4.26562 7 5.25 7Z"
+                      fill="#DD2B1C"
+                    />
+                  </svg>
+                </div>
+                <div>
                   <p>Location</p>
-                  <a href="#!">1304 – 1308, Cyber One, <br /> Sector – 30-A, Vashi, <br />Navi Mumbai – 400703. <br />Near CIDCO Exhibition Center</a>
-                  </div>
+                  <a href="#!">
+                    1304 – 1308, Cyber One, <br /> Sector – 30-A, Vashi, <br />
+                    Navi Mumbai – 400703. <br />
+                    Near CIDCO Exhibition Center
+                  </a>
+                </div>
               </div>
 
               <div className="sociallisk">
-                   <ul>
-                                <li><a href="#!">
-                                    <svg width="16" height="28" viewBox="0 0 16 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M3.60938 16.4062H0V11.0469H3.60938V8.75C3.60938 2.78906 6.28906 0 12.1406 0C13.2344 0 15.1484 0.21875 15.9141 0.4375V5.30469C15.5312 5.25 14.8203 5.25 13.8906 5.25C11.0469 5.25 9.95312 6.34375 9.95312 9.13281V11.0469H15.6406L14.6562 16.4062H9.95312V28H3.60938V16.4062Z" fill="white" />
-                                    </svg></a></li>
-                                <li><a href="#!"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                                    <path d="M19.0443 13.5498L30.9571 0H28.1341L17.7903 11.7651L9.52875 0H0L12.4931 17.7909L0 32H2.82309L13.7464 19.5756L22.4713 32H32L19.0437 13.5498H19.0443ZM15.1777 17.9477L13.9119 16.1761L3.84029 2.07948H8.1764L16.3043 13.4559L17.5701 15.2275L28.1355 30.0151H23.7994L15.1777 17.9484V17.9477Z" fill="white" />
-                                </svg></a></li>
-                                <li><a href="#!">
-                                    <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M22.75 0C23.6797 0 24.5 0.820312 24.5 1.80469V22.75C24.5 23.7344 23.6797 24.5 22.75 24.5H1.69531C0.765625 24.5 0 23.7344 0 22.75V1.80469C0 0.820312 0.765625 0 1.69531 0H22.75ZM7.38281 21V9.35156H3.77344V21H7.38281ZM5.57812 7.71094C6.72656 7.71094 7.65625 6.78125 7.65625 5.63281C7.65625 4.48438 6.72656 3.5 5.57812 3.5C4.375 3.5 3.44531 4.48438 3.44531 5.63281C3.44531 6.78125 4.375 7.71094 5.57812 7.71094ZM21 21V14.6016C21 11.4844 20.2891 9.02344 16.625 9.02344C14.875 9.02344 13.6719 10.0078 13.1797 10.9375H13.125V9.35156H9.67969V21H13.2891V15.2578C13.2891 13.7266 13.5625 12.25 15.4766 12.25C17.3359 12.25 17.3359 14 17.3359 15.3125V21H21Z" fill="white" />
-                                    </svg>
-                                </a></li>
-                                <li><a href="#!"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
-                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M15.6815 5.22705C16.7988 5.22705 17.9449 5.2558 19.0557 5.30285L20.3677 5.36557L21.6235 5.44006L22.7997 5.51977L23.8739 5.60341C25.0398 5.69213 26.137 6.18942 26.9722 7.0077C27.8075 7.82597 28.3272 8.91274 28.4398 10.0766L28.4921 10.632L28.5901 11.8212C28.6816 13.0535 28.7495 14.3969 28.7495 15.6815C28.7495 16.966 28.6816 18.3094 28.5901 19.5417L28.4921 20.7309L28.4398 21.2863C28.3271 22.4504 27.8072 23.5373 26.9717 24.3556C26.1362 25.1739 25.0387 25.6711 23.8725 25.7595L22.801 25.8418L21.6249 25.9228L20.3677 25.9973L19.0557 26.0601C17.9316 26.1087 16.8067 26.134 15.6815 26.1359C14.5564 26.134 13.4314 26.1087 12.3074 26.0601L10.9953 25.9973L9.73951 25.9228L8.56339 25.8418L7.4892 25.7595C6.32329 25.6708 5.22608 25.1735 4.39083 24.3552C3.55558 23.5369 3.03587 22.4502 2.92324 21.2863L2.87097 20.7309L2.77295 19.5417C2.67342 18.2573 2.62024 16.9697 2.61353 15.6815C2.61353 14.3969 2.68148 13.0535 2.77295 11.8212L2.87097 10.632L2.92324 10.0766C3.03583 8.91295 3.55535 7.82634 4.39033 7.0081C5.22532 6.18985 6.32221 5.69242 7.48789 5.60341L8.56077 5.51977L9.73689 5.44006L10.994 5.36557L12.3061 5.30285C13.4306 5.25414 14.556 5.22887 15.6815 5.22705ZM13.0679 12.5125V18.8504C13.0679 19.4542 13.7213 19.8305 14.244 19.53L19.7326 16.361C19.852 16.2922 19.9512 16.1932 20.0202 16.0739C20.0892 15.9546 20.1255 15.8193 20.1255 15.6815C20.1255 15.5436 20.0892 15.4083 20.0202 15.289C19.9512 15.1697 19.852 15.0707 19.7326 15.0019L14.244 11.8342C14.1248 11.7654 13.9896 11.7292 13.8519 11.7292C13.7142 11.7292 13.579 11.7655 13.4597 11.8344C13.3405 11.9032 13.2416 12.0023 13.1728 12.1216C13.104 12.2408 13.0678 12.3761 13.0679 12.5138V12.5125Z" fill="white" />
-                                </svg></a></li>
-                            </ul>
+                <ul>
+                  <li>
+                    <a href="#!">
+                      <svg
+                        width="16"
+                        height="28"
+                        viewBox="0 0 16 28"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M3.60938 16.4062H0V11.0469H3.60938V8.75C3.60938 2.78906 6.28906 0 12.1406 0C13.2344 0 15.1484 0.21875 15.9141 0.4375V5.30469C15.5312 5.25 14.8203 5.25 13.8906 5.25C11.0469 5.25 9.95312 6.34375 9.95312 9.13281V11.0469H15.6406L14.6562 16.4062H9.95312V28H3.60938V16.4062Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#!">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                        fill="none"
+                      >
+                        <path
+                          d="M19.0443 13.5498L30.9571 0H28.1341L17.7903 11.7651L9.52875 0H0L12.4931 17.7909L0 32H2.82309L13.7464 19.5756L22.4713 32H32L19.0437 13.5498H19.0443ZM15.1777 17.9477L13.9119 16.1761L3.84029 2.07948H8.1764L16.3043 13.4559L17.5701 15.2275L28.1355 30.0151H23.7994L15.1777 17.9484V17.9477Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#!">
+                      <svg
+                        width="25"
+                        height="25"
+                        viewBox="0 0 25 25"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path
+                          d="M22.75 0C23.6797 0 24.5 0.820312 24.5 1.80469V22.75C24.5 23.7344 23.6797 24.5 22.75 24.5H1.69531C0.765625 24.5 0 23.7344 0 22.75V1.80469C0 0.820312 0.765625 0 1.69531 0H22.75ZM7.38281 21V9.35156H3.77344V21H7.38281ZM5.57812 7.71094C6.72656 7.71094 7.65625 6.78125 7.65625 5.63281C7.65625 4.48438 6.72656 3.5 5.57812 3.5C4.375 3.5 3.44531 4.48438 3.44531 5.63281C3.44531 6.78125 4.375 7.71094 5.57812 7.71094ZM21 21V14.6016C21 11.4844 20.2891 9.02344 16.625 9.02344C14.875 9.02344 13.6719 10.0078 13.1797 10.9375H13.125V9.35156H9.67969V21H13.2891V15.2578C13.2891 13.7266 13.5625 12.25 15.4766 12.25C17.3359 12.25 17.3359 14 17.3359 15.3125V21H21Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#!">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="32"
+                        height="32"
+                        viewBox="0 0 32 32"
+                        fill="none"
+                      >
+                        <path
+                          fill-rule="evenodd"
+                          clip-rule="evenodd"
+                          d="M15.6815 5.22705C16.7988 5.22705 17.9449 5.2558 19.0557 5.30285L20.3677 5.36557L21.6235 5.44006L22.7997 5.51977L23.8739 5.60341C25.0398 5.69213 26.137 6.18942 26.9722 7.0077C27.8075 7.82597 28.3272 8.91274 28.4398 10.0766L28.4921 10.632L28.5901 11.8212C28.6816 13.0535 28.7495 14.3969 28.7495 15.6815C28.7495 16.966 28.6816 18.3094 28.5901 19.5417L28.4921 20.7309L28.4398 21.2863C28.3271 22.4504 27.8072 23.5373 26.9717 24.3556C26.1362 25.1739 25.0387 25.6711 23.8725 25.7595L22.801 25.8418L21.6249 25.9228L20.3677 25.9973L19.0557 26.0601C17.9316 26.1087 16.8067 26.134 15.6815 26.1359C14.5564 26.134 13.4314 26.1087 12.3074 26.0601L10.9953 25.9973L9.73951 25.9228L8.56339 25.8418L7.4892 25.7595C6.32329 25.6708 5.22608 25.1735 4.39083 24.3552C3.55558 23.5369 3.03587 22.4502 2.92324 21.2863L2.87097 20.7309L2.77295 19.5417C2.67342 18.2573 2.62024 16.9697 2.61353 15.6815C2.61353 14.3969 2.68148 13.0535 2.77295 11.8212L2.87097 10.632L2.92324 10.0766C3.03583 8.91295 3.55535 7.82634 4.39033 7.0081C5.22532 6.18985 6.32221 5.69242 7.48789 5.60341L8.56077 5.51977L9.73689 5.44006L10.994 5.36557L12.3061 5.30285C13.4306 5.25414 14.556 5.22887 15.6815 5.22705ZM13.0679 12.5125V18.8504C13.0679 19.4542 13.7213 19.8305 14.244 19.53L19.7326 16.361C19.852 16.2922 19.9512 16.1932 20.0202 16.0739C20.0892 15.9546 20.1255 15.8193 20.1255 15.6815C20.1255 15.5436 20.0892 15.4083 20.0202 15.289C19.9512 15.1697 19.852 15.0707 19.7326 15.0019L14.244 11.8342C14.1248 11.7654 13.9896 11.7292 13.8519 11.7292C13.7142 11.7292 13.579 11.7655 13.4597 11.8344C13.3405 11.9032 13.2416 12.0023 13.1728 12.1216C13.104 12.2408 13.0678 12.3761 13.0679 12.5138V12.5125Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
               </div>
-               
             </div>
           </div>
         </div>
-
       </div>
       {/* <div className="custom-container hrcontainer"> */}
-        <div className="line">
-          <hr />
-        </div>
+      <div className="line">
+        <hr />
+      </div>
       {/* </div> */}
       <div className="custom-container">
         <div className="copyright">
-        <p >Copyright © 2026 Ronak Advertising. All Rights Reserved. Powered By : <a href="#!">DIIGIIHOST</a></p>
-        <ul>
-          <li ><a href="#!">Trams & Condition</a></li>
-          <li><a href="#!">Privacy Policy</a></li>
-          <li ><a href="/contact">Contact Us</a></li>
-        </ul>
+          <p>
+            Copyright © 2026 Ronak Advertising. All Rights Reserved. Powered By
+            : <a href="#!">DIIGIIHOST</a>
+          </p>
+          <ul>
+            <li>
+              <a href="#!">Trams & Condition</a>
+            </li>
+            <li>
+              <a href="#!">Privacy Policy</a>
+            </li>
+            <li>
+              <a href="/contact">Contact Us</a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

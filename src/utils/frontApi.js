@@ -88,6 +88,10 @@ export const getCaseStudyDetailApi = (slug) => {
 export const getCaseStudyTestimonialsApi = (slug) => {
   return frontApi.get(`/case-study/${slug}/testimonials`);
 };
+
+export const subscribeApi = (data) => {
+  return frontApi.post("/subscribe", data);
+};
 // =============================
 // OPTIONAL ERROR HANDLER
 // =============================
