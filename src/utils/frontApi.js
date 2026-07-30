@@ -76,6 +76,18 @@ export const getLocationsApi = () => {
   return frontApi.get("/locations");
 };
 
+
+export const getCaseStudiesApi = () => {
+  return frontApi.get("/case-studies");
+};
+
+export const getCaseStudyDetailApi = (slug) => {
+  return frontApi.get(`/case-study/${slug}`);
+};
+
+export const getCaseStudyTestimonialsApi = (slug) => {
+  return frontApi.get(`/case-study/${slug}/testimonials`);
+};
 // =============================
 // OPTIONAL ERROR HANDLER
 // =============================

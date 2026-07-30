@@ -1,8 +1,9 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
 const CaseStudyCard = ({data}) => {
   return (
-    <a href="/case-study-details" className='blogcard'>
+    <Link to={`/case-study/${data.slug}`} className="blogcard">
         <div className="blogwrap">
         <figure>
             <img src={data.image} alt="" />
@@ -32,7 +33,7 @@ const CaseStudyCard = ({data}) => {
           </button>
               </div>
 
-    </a>
+    </Link>
   )
 }
 

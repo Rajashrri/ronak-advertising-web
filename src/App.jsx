@@ -62,7 +62,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/media" element={<Media />} />
             <Route path="/case-study" element={<CaseStudy />} />
-            <Route path="/case-study-details" element={<CaseStudydetails />} />
+            <Route path="/case-study/:slug" element={<CaseStudydetails />} />
             <Route path="/*" element={<Error />} />
             <Route path="/thank-you" element={<ThankYou />} />
           </Route>
