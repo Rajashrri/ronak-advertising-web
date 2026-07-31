@@ -17,16 +17,16 @@ const WatchSomeVideo = () => {
                 <div className="col-lg-6">
                     <div className="blogcontent wtachccntainer">
                              <Heading
-                    title="We Pioneered OOH Advertising in Mumbai"
-                    subtitle="Watch Some Video"
+                    title="WE PIONEERED OOH ADVERTISING IN NAVI MUMBAI"
+                    subtitle="WHERE IT ALL BEGAN"
                     titleclass="text-black"
                     />
-                    <p className='mb-0' data-gsap>Billboard advertising is a powerful marketing tool that he businesses gain visibility and reach their target audience</p>
+                    <p className='mb-0' data-gsap>As Navi Mumbai grew, Ronak helped shape its outdoor media landscape. Today, our network connects brands with audiences across the city’s most important commercial, residential and transit corridors.</p>
                       
-                      <div className="input" data-gsap>
-                        <input type="text" placeholder='street address or zip/postal code' />
+                      <div className="input whatcv" data-gsap>
+                        <input type="text" placeholder='Search by area or location' />
                         <button>
-                            Go
+                            Explore
                         </button>
                       </div>
                     </div>
