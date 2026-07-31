@@ -320,14 +320,14 @@ useEffect(() => {
                 <div className="col-lg-6">
                   <div className="input-form">
                     <label>Email Address  <span>*</span></label>
-                    <input type="text" name="" id="" placeholder="Jhone Doe" />
+                    <input type="text" name="" id="" placeholder="JhoneDoe@gmail.com" />
 
                   </div>
                 </div>
                 <div className="col-lg-6">
                   <div className="input-form">
                     <label>Mobile Number  <span>*</span> </label>
-                    <input type="text" name="" id="" placeholder="Jhone Doe" />
+                    <input type="text" name="" id="" placeholder="0000000000" />
 
                   </div>
                 </div>
