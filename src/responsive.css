@@ -700,6 +700,9 @@ text-transform: capitalize;
         width: 80% !important;
 
     }
+    .heroheight, .breadcrumb {
+    margin-top: 125px;
+}
     .timeline {
     padding: 70px 16px;
     }
