@@ -75,7 +75,7 @@ useEffect(() => {
         <div className="container">
           <div className="row">
             <div className="col-lg-3 col-md-4 col-9">
-              <a href="#!" className="logo">
+              <a href="/" className="logo">
                 <img src={logo} alt="Logo" />
               </a>
             </div>
@@ -328,7 +328,6 @@ useEffect(() => {
                   <div className="input-form">
                     <label>Mobile Number  <span>*</span> </label>
                     <input type="text" name="" id="" placeholder="0000000000" />
-
                   </div>
                 </div>
                 <div className="col-lg-6">
