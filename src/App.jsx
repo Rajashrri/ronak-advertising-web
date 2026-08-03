@@ -52,9 +52,13 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/location" element={<Location />} />
+            <Route path="/location/:slug" element={<Location />} />
+            <Route
+              path="/location-details/:slug"
+              element={<LocationDetails />}
+            />
+
             <Route path="/team" element={<Team />} />
-            <Route path="/location-details" element={<LocationDetails />} />
             <Route path="/blogs" element={<BlogList />} />
             <Route path="/blogs/:slug" element={<BlogList />} />
             <Route path="/blog/:slug" element={<BlogDetails />} />

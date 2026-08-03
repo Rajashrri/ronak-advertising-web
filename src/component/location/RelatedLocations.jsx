@@ -4,27 +4,11 @@ import img1 from "../../assets/imgs/location/locationlist.png";
 import LocationCard from '../reuse/cards/LocationCard';
 
 
-const locations = [
-    {
-        id: 1,
-        category: "Hoarding",
-        title: "VASHI TOLL NAKA FCG VASHI (MIDDLE)",
-        media: "Palm Media",
-        siteCode: "VNM001",
-        image: img1,
-    },
-    {
-        id: 2,
-        category: "Bill Board",
-        title: "VASHI TOLL NAKA FCG VASHI (MIDDLE)",
-        media: "Palm Media",
-        siteCode: "VNM002",
-        image: img1,
-    }
-];
 
 
-const RelatedLocations = () => {
+
+const RelatedLocations = ({ locations = [] }) => {
+  if (!locations.length) return null;
     return (
         <div className='p-70'>
             <div className="custom-container">

@@ -36,7 +36,12 @@ export const getBlogCategoriesApi = () => {
 export const contactApi = (data) => {
   return frontApi.post("/add-contact", data);
 };
-
+export const getLocationBySlugApi = (slug) => {
+  return frontApi.get(`/location/${slug}`);
+};
+export const getLocationDetailApi = (slug) => {
+  return frontApi.get(`/location-details/${slug}`);
+};
 export const careerApi = (data) => {
   return frontApi.post(
     `/career`,

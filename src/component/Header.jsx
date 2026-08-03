@@ -59,11 +59,13 @@ const Header = () => {
 
                   <div className="mega-menu">
                     <div className="mega-grid">
-                      {locations.map((item) => (
-                        <a key={item._id} href={`/location/${item._id}`}>
-                          {item.locationName}
-                        </a>
-                      ))}
+                      {locations.map((item) => {
+                        return (
+                          <a key={item._id} href={`/location/${item.slug}`}>
+                            {item.locationName}
+                          </a>
+                        );
+                      })}
                     </div>
                   </div>
                 </li>
