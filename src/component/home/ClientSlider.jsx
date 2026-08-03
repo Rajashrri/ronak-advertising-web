@@ -65,7 +65,7 @@ export default function ClientSlider() {
 
   return (
     <section className="client-section p-70 pb-0" data-gsap>
-        <p>Join the 150+ companies trusting maxline company</p>
+        <p>Trusted by brands across real estate, healthcare, <br /> retail, education and more.</p>
 
       {/* Left → Right */}
       <Swiper {...sliderSettings(true)}>

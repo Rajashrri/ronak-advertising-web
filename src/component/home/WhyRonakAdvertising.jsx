@@ -8,8 +8,8 @@ const WhyRonakAdvertising = () => {
   return (
     <div className='p-70 avertising'>
         <Heading
-        title="Supercharge Your Business with </br> Billboards"
-        subtitle="Why Ronak Advertising"
+        title="BUILD A BIGGER PRESENCE <br/>ACROSS THE CITY"
+        subtitle="Why Outdoor with Ronak"
         className="text-center"
         />
 
@@ -20,7 +20,7 @@ const WhyRonakAdvertising = () => {
                         <figure>
                             <img src={billboard1} alt="" />
                         </figure>
-                        <h3>Illuminate Your Business with Billboard </h3>
+                        <h3>PRIME LOCATIONS THAT MATTER</h3>
                     </div>
                 </div>
                 <div className="col-lg-4">
@@ -28,7 +28,7 @@ const WhyRonakAdvertising = () => {
                         <figure>
                             <img src={billboard2} alt="" />
                         </figure>
-                        <h3>Unleash the Power  of  Advertising</h3>
+                        <h3>MEDIA BUILT TO COMMAND ATTENTION</h3>
                     </div>
                 </div>
                 <div className="col-lg-4">
@@ -36,7 +36,7 @@ const WhyRonakAdvertising = () => {
                         <figure>
                             <img src={billboard3} alt="" />
                         </figure>
-                        <h3>Unlock the Potential of Outdoor Marketing </h3>
+                        <h3>PLANNING BACKED BY LOCAL INTELLIGENCE</h3>
                     </div>
                 </div>
             </div>

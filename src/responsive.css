@@ -134,6 +134,9 @@
             border-radius: 0 0 24px 24px;
             overflow: hidden;
     }
+    .hoidemob{
+        display: none;
+    }
     .hero-slider{
         height: auto;
         display: flex;
@@ -311,6 +314,12 @@ margin-top: 14px;
 .line{
     padding: 17px;
     margin-bottom: 17px;
+}
+.startform{
+    padding-right: 0;
+}
+.close-btn{
+    top: -60px;
 }
 .review-section .row{
     gap: 40px 0;
@@ -641,6 +650,22 @@ text-transform: capitalize;
     .aboutcta h2{
         font-size: 68px;
     }
+    .startingpopup h2{
+      color: var(--P2, #FA0000);
+font-feature-settings: 'liga' off, 'clig' off;
+
+/* Heading/H2 */
+font-size: 40px;
+font-style: normal;
+font-weight: 400;
+line-height: 45px; /* 112.5% */
+letter-spacing: -0.76px;
+text-transform: capitalize;
+    }
+    .startingpopup{
+        padding: 24px;
+        padding-top: 100px;
+    }
     .team-grid {
     display: grid;
     grid-template-columns: repeat(1, 1fr);
@@ -675,6 +700,9 @@ text-transform: capitalize;
         width: 80% !important;
 
     }
+    .heroheight, .breadcrumb {
+    margin-top: 125px;
+}
     .timeline {
     padding: 70px 16px;
     }

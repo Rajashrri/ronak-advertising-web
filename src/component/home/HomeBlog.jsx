@@ -28,14 +28,14 @@ const HomeBlog = () => {
             <div className="row justify-content-between">
                 <div className="col-lg-6">
                          <Heading
-                    title="Where the Beat Meets  business Billboard"
-                    subtitle="Latest Blog"
+                    title="WHERE THE STREET MEETS STRATEGY"
+                    subtitle="LATEST INSIGHTS"
                     titleclass="text-black"
                     />
                 </div>
                 <div className="col-lg-5">
                     <div className="blogpara" data-gsap>
-                        <p>Billboard advertising is a powerful marketing too businesBillboard advertising is a powerful marketing tool that he businesses gain visibility and reach their target audienceses</p>
+                        <p>Explore practical thinking on media locations, campaign planning and using city movement to build stronger brand visibility.</p>
                     </div>
                 </div>
             </div>

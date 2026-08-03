@@ -8,8 +8,8 @@ const AtGlance = () => {
             <div className="row">
                 <div className="col-lg-6">
                      <Heading
-                    title="Outdoor Advertising that Delivers"
-                    subtitle="At Glance"
+                    title="OUTDOOR ADVERTISING THAT DELIVERS"
+                    subtitle="RONAK AT A GLANCE"
                     titleclass="text-black"
                     // className="text-left"
                     />
@@ -19,25 +19,25 @@ const AtGlance = () => {
                         <div className="col-lg-6 col-md-6">
                             <div className="atbox" data-gsap>
                                 <h2>200+</h2>
-                                <p>Canvases</p>
+                                <p>Prime Media Sites</p>
                             </div>
                         </div>
                         <div className="col-lg-6 col-md-6">
                             <div className="atbox" data-gsap>
                                 <h2>12m+</h2>
-                                <p>Weekly Impressions</p>
+                                <p>Monthly Audience Exposure</p>
                             </div>
                         </div>
                         <div className="col-lg-6 col-md-6">
                             <div className="atbox" data-gsap>
                                 <h2>200k+</h2>
-                                <p>Creatives</p>
+                                <p>Daily Commuter Reach</p>
                             </div>
                         </div>
                         <div className="col-lg-6 col-md-6">
                             <div className="atbox" data-gsap>
                                 <h2>500+</h2>
-                                <p>Clients</p>
+                                <p>Campaigns Delivered</p>
                             </div>
                         </div>
                     </div>

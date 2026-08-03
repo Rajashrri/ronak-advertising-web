@@ -11,11 +11,17 @@ const CompanyOverview = () => {
                 <div className="col-lg-6">
                     <div className="overfloae">
                          <Heading
-                                title="Company Overview"
+                                title="More Than Media Owners. Partners In Visibility."
                                 subtitle="Overview"
                                 titleclass="text-black"
                             />
-                            <p data-gsap>Web designing in a powerful way of just n professions, however, in  passion for a our Company. We hatendency to believe the idea that sm Technology is a broad category encompassing all aspects Web designing in a powerful = Web designing in a powerful way of just n professions, however, in  passion for a our Company. We hatendency to believe the idea that sm Technology is a broad category encompassing all aspects Web designing in a powerful =</p>
+                            <div className="abdisk">
+
+                            <p data-gsap>Ronak Advertising was founded with a simple belief — visibility creates opportunity.</p>
+                            <p data-gsap>What began as a focused outdoor media company has evolved into one of Navi Mumbai's most established advertising partners, helping brands connect with audiences through high-impact outdoor campaigns and integrated media solutions.</p>
+                            <p data-gsap>Our understanding of the city, its movement patterns and its growth corridors allows us to place brands where attention naturally exists.</p>
+                            <p data-gsap>Today, Ronak continues to work with businesses across industries including real estate, healthcare, retail, education, finance and infrastructure.</p>
+                            </div>
                     </div>
                 </div>
                 <div className="col-lg-6">
