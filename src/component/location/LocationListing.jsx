@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-
+import { Helmet } from "react-helmet-async";
 import { getLocationBySlugApi } from "../../utils/frontApi";
 import LocationCard from "../reuse/cards/LocationCard";
 
@@ -22,12 +22,29 @@ const LocationListing = () => {
       setFilters(["All", ...res.data.filters]);
     }
   };
-
+const locationName =
+  locations.length > 0
+    ? locations[0]?.locationId?.locationName
+    : "";
   const filteredLocations =
     activeFilter === "All"
       ? locations
       : locations.filter((item) => item.mediaType === activeFilter);
   return (
+    <>
+  <Helmet>
+    <title>
+      {locationName
+        ? `Location | ${locationName} | Ronak Advertising`
+        : "Location | Ronak Advertising"}
+    </title>
+
+    <meta
+      name="description"
+      content={`Explore advertising locations in ${locationName}.`}
+    />
+  </Helmet>
+
     <section className="location-section">
       <div className="custom-container">
         {/* Filter */}
@@ -59,6 +76,7 @@ const LocationListing = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 
