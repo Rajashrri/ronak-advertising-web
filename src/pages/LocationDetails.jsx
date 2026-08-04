@@ -34,7 +34,7 @@ const LocationDetails = () => {
   return (
     <div className="loca-details-page">
       <Breadcrumb
-        title="Vashi Toll Naka Fcg Vashi (Middle)"
+        title={ location.siteName }
         items={[
           { label: "Home", link: "/" },
  {

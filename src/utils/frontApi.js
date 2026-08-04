@@ -53,7 +53,12 @@ export const careerApi = (data) => {
     }
   );
 };
-
+export const locationEnquiryApi = (data) => {
+  return frontApi.post(
+    "/location-enquiry",
+    data
+  );
+};
 export const getTeamMembersApi = () => {
   return frontApi.get("/team-members");
 };
