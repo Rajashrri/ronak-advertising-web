@@ -693,6 +693,11 @@ text-transform: capitalize;
     .team-content h3{
         margin-bottom: 5;
     }
+    .startingpopup > div{
+          scale: 1;
+  margin-top: 0px;
+  margin-bottom:0px;
+    }
     .ab2{
     }
     .aboutcover figure {

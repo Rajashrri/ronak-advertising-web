@@ -3614,9 +3614,9 @@ text-transform: capitalize;
   z-index: 1111;
 
   padding: 83px;
-  border-radius: 50px;
+  border-radius: 0px;
   border: 1px solid #898989;
-  background: #1A1A1A;
+  background: #1a1a1a3d;
   scrollbar-width: none;
   overflow-y: auto;
   overflow-x: hidden;
@@ -3706,7 +3706,11 @@ align-self: stretch;
   max-width: 1306px;
   scale: 0.7;
   margin-top: -170px;
-  margin-bottom: 170px;
+  margin-bottom: -170px;
+  background-color: #1A1A1A;
+  padding: 30px 60px;
+    border-radius: 50px;
+  
   }
   .startingpopup figure{
     height: 90%;
@@ -3790,8 +3794,8 @@ align-self: stretch;
   border: none;
   box-shadow: none;
   position: absolute;
-  top: 0;
-  right: 0;
+     top: 39px;
+    right: 51px;
  }
  .flotingicon{
    position: fixed;
