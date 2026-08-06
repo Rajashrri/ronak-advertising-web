@@ -1285,7 +1285,7 @@ a {
   line-height: 30px;
   /* 150% */
   letter-spacing: -0.6px;
-  text-transform: capitalize;
+  /* text-transform: capitalize; */
 }
 
 .footer .hrcontainer hr {
@@ -1451,13 +1451,26 @@ a {
   overflow: hidden;
   border-radius: 18px;
   /* height: 380px; */
-  height: 520px;
+  height: 300px;
 }
 
 .location-card img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+  .location-card:nth-child(1){
+    grid-column: span 8;
+}
+  .location-card:nth-child(2){
+    grid-column: span 4;
+}
+  .location-card:nth-child(3){
+    grid-column: span 4;
+}
+  .location-card:nth-child(4){
+    grid-column: span 4;
 }
 
 .location-card .overlay {
