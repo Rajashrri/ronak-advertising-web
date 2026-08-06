@@ -1470,7 +1470,7 @@ a {
     grid-column: span 4;
 }
   .location-card:nth-child(4){
-    grid-column: span 4;
+    grid-column: span 8;
 }
 
 .location-card .overlay {
