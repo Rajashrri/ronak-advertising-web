@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import { getLocationsApi } from "../utils/frontApi";
 import Heading from "./reuse/Heading";
 import formimg from "../assets/imgs/formimg.png"
+import { useLocation } from "react-router-dom";
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [locations, setLocations] = useState([]);
@@ -12,13 +13,19 @@ const Header = () => {
   useEffect(() => {
     fetchLocations();
   }, []);
-  useEffect(() => {
+  const location1 = useLocation();
+useEffect(() => {
+  if (location1.pathname !== "/") {
+    setShowPopup(false);
+    return;
+  }
+
   const timer = setTimeout(() => {
     setShowPopup(true);
-  }, 2000); // Opens after 2 seconds
+  }, 2000);
 
   return () => clearTimeout(timer);
-}, []);
+}, [location1.pathname]);
 useEffect(() => {
   if (showPopup) {
     document.body.style.overflow = "hidden";
@@ -128,7 +135,7 @@ useEffect(() => {
                   <a href="/case-study">Case Studies</a>
                 </li>
                 <li>
-                  <a href="/contact">Contact</a>
+                  <a href="/team">Team</a>
                 </li>
               </ul>
             </div>
@@ -261,8 +268,8 @@ useEffect(() => {
                 </a>
               </li>
               <li>
-                <a href="/contact" onClick={() => setMenuOpen(false)}>
-                  Contact
+                <a href="/team" onClick={() => setMenuOpen(false)}>
+                  Team
                 </a>
               </li>
             </ul>
@@ -302,7 +309,7 @@ useEffect(() => {
         <div className="col-lg-8 col-md-12">
           <div className="startformcontainer">
            <h2>Let's Plan Your Advertising Campaign</h2>
-           <p>Fill in your details and our media experts will help you find the best advertising locations for your brand.
+           <p>Fill in your details and our media experts will help you find the best advertising locations for your brand.  </p>
             <div className="startform">
               <div className="row">
                 <div className="col-lg-6">
@@ -392,7 +399,7 @@ useEffect(() => {
                 </div>
               </div>
             </div>
-           </p>
+         
           </div>
         </div>
         <div className="col-lg-4 hoidemob">
