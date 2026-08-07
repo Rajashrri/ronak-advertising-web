@@ -6,7 +6,7 @@ import img2 from "./../../assets/imgs/about/ab2.png"
 const CompanyOverview = () => {
   return (
     <div className='p-70 companyoverview'>
-        <div className="custom-container">
+        <div className="why-container">
             <div className="row">
                 <div className="col-lg-6">
                     <div className="overfloae">

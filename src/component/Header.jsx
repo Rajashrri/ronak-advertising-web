@@ -95,6 +95,9 @@ useEffect(() => {
                 <li>
                   <a href="/about">About us</a>
                 </li>
+                     <li>
+                  <a href="/team">Team</a>
+                </li>
                 <li className="has-submenu">
                   <a href="/location">
                     Locations
@@ -134,9 +137,7 @@ useEffect(() => {
                 <li>
                   <a href="/case-study">Case Studies</a>
                 </li>
-                <li>
-                  <a href="/team">Team</a>
-                </li>
+           
               </ul>
             </div>
 
@@ -224,6 +225,9 @@ useEffect(() => {
                   About us
                 </a>
               </li>
+                   <li>
+                  <a href="/team">Team</a>
+                </li>
               <li className="has-submenu">
                 <a href="/location">
                   Locations
@@ -267,11 +271,7 @@ useEffect(() => {
                   Case Studies
                 </a>
               </li>
-              <li>
-                <a href="/team" onClick={() => setMenuOpen(false)}>
-                  Team
-                </a>
-              </li>
+            
             </ul>
 
             <a href="/contact" className="btn">

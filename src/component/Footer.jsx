@@ -28,6 +28,7 @@ const Footer = () => {
       setEmailError("Please enter a valid email address");
       return;
     }
+  
 
     try {
       setLoading(true);
@@ -44,7 +45,9 @@ const Footer = () => {
       setLoading(false);
     }
   };
+    const year = new Date().getFullYear()
   return (
+    
     <>
     <div className="footer">
       <div className="custom-container curve">
@@ -94,15 +97,18 @@ const Footer = () => {
             <div className="footerlist">
               <h3>Quick Link</h3>
               <ul>
-                <li>
+                {/* <li>
                   <a href="/">Home</a>
-                </li>
+                </li> */}
                 <li>
                   <a href="/about">About us</a>
                 </li>
                 <li>
-                  <a href="/location">Locations</a>
+                  <a href="/team">Team</a>
                 </li>
+                {/* <li>
+                  <a href="/location">Locations</a>
+                </li> */}
                 <li>
                   <a href="/blogs">Blog</a>
                 </li>
@@ -138,8 +144,8 @@ const Footer = () => {
                 </div>
                 <div>
                   <p>Phone Number</p>
-                  <a href="#!">+91 22-49694802</a> <br />
-                  <a href="#!">+91 22-20870060</a>
+                  <a href="tel:+912249694802">+91 22-49694802</a> <br />
+                  <a href="tel:+912220870060">+91 22-20870060</a>
                 </div>
               </div>
               <div className="locationcard">
@@ -159,8 +165,8 @@ const Footer = () => {
                 </div>
                 <div>
                   <p>Email</p>
-                  <a href="#!">info@ronakadvertising.com </a> <br />
-                  <a href="#!">ronak.advt@gmail.com</a>
+                  <a href="mailto:info@ronakadvertising.com">info@ronakadvertising.com  </a> <br />
+                  <a href="mailto:ronak.advt@gmail.com">ronak.advt@gmail.com</a>
                 </div>
               </div>
             </div>
@@ -186,9 +192,10 @@ const Footer = () => {
                 <div>
                   <p>Location</p>
                   <a href="#!">
-                    1304 – 1308, Cyber One, <br /> Sector – 30-A, Vashi, <br />
-                    Navi Mumbai – 400703. <br />
-                    Near CIDCO Exhibition Center
+                  1304 – 1308, Cyber One, <br />
+                  Sector – 30-A, Vashi,<br />
+                  Navi Mumbai – 400703.<br />
+                  Near CIDCO Exhibition Center
                   </a>
                 </div>
               </div>
@@ -196,7 +203,7 @@ const Footer = () => {
               <div className="sociallisk">
                 <ul>
                   <li>
-                    <a href="#!">
+                    <a href="https://www.facebook.com/ronakadvertising.official" target="_blank">
                       <svg
                         width="16"
                         height="28"
@@ -212,12 +219,12 @@ const Footer = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="#!">
+                    <a href="https://www.instagram.com/ronakadvertising.official" target="_blank">
                     <svg xmlns="http://www.w3.org/2000/svg" width="27" height="27" viewBox="0 0 27 27" fill="none"><path d="M19.5 0C21.4891 0 23.3968 0.790176 24.8033 2.1967C26.2098 3.60322 27 5.51088 27 7.5V19.5C27 21.4891 26.2098 23.3968 24.8033 24.8033C23.3968 26.2098 21.4891 27 19.5 27H7.5C5.51088 27 3.60322 26.2098 2.1967 24.8033C0.790176 23.3968 0 21.4891 0 19.5V7.5C0 5.51088 0.790176 3.60322 2.1967 2.1967C3.60322 0.790176 5.51088 0 7.5 0H19.5ZM13.5 7.5C11.9087 7.5 10.3826 8.13214 9.25736 9.25736C8.13214 10.3826 7.5 11.9087 7.5 13.5C7.5 15.0913 8.13214 16.6174 9.25736 17.7426C10.3826 18.8679 11.9087 19.5 13.5 19.5C15.0913 19.5 16.6174 18.8679 17.7426 17.7426C18.8679 16.6174 19.5 15.0913 19.5 13.5C19.5 11.9087 18.8679 10.3826 17.7426 9.25736C16.6174 8.13214 15.0913 7.5 13.5 7.5ZM13.5 10.5C14.2956 10.5 15.0587 10.8161 15.6213 11.3787C16.1839 11.9413 16.5 12.7044 16.5 13.5C16.5 14.2956 16.1839 15.0587 15.6213 15.6213C15.0587 16.1839 14.2956 16.5 13.5 16.5C12.7044 16.5 11.9413 16.1839 11.3787 15.6213C10.8161 15.0587 10.5 14.2956 10.5 13.5C10.5 12.7044 10.8161 11.9413 11.3787 11.3787C11.9413 10.8161 12.7044 10.5 13.5 10.5ZM20.25 5.25C19.8522 5.25 19.4706 5.40804 19.1893 5.68934C18.908 5.97064 18.75 6.35218 18.75 6.75C18.75 7.14782 18.908 7.52936 19.1893 7.81066C19.4706 8.09196 19.8522 8.25 20.25 8.25C20.6478 8.25 21.0294 8.09196 21.3107 7.81066C21.592 7.52936 21.75 7.14782 21.75 6.75C21.75 6.35218 21.592 5.97064 21.3107 5.68934C21.0294 5.40804 20.6478 5.25 20.25 5.25Z" fill="white"></path></svg>
                     </a>
                   </li>
                   <li>
-                    <a href="#!">
+                    <a href="https://www.linkedin.com/in/ronak-advertising-867739113" target="_blank">
                       <svg
                         width="25"
                         height="25"
@@ -232,8 +239,9 @@ const Footer = () => {
                       </svg>
                     </a>
                   </li>
+
                   <li>
-                    <a href="#!">
+                    <a href="https://www.youtube.com/@amardeepsinghvig9976" target="_blank">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         width="32"
@@ -250,6 +258,13 @@ const Footer = () => {
                       </svg>
                     </a>
                   </li>
+                  <li>
+                    <a href="https://x.com/ronak_advt" target="_blank">
+                 <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+  <path d="M19.0443 13.5498L30.9571 0H28.1341L17.7903 11.7651L9.52875 0H0L12.4931 17.7909L0 32H2.82309L13.7464 19.5756L22.4713 32H32L19.0437 13.5498H19.0443ZM15.1777 17.9477L13.9119 16.1761L3.84029 2.07948H8.1764L16.3043 13.4559L17.5701 15.2275L28.1355 30.0151H23.7994L15.1777 17.9484V17.9477Z" fill="white"/>
+</svg>
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -264,12 +279,12 @@ const Footer = () => {
       <div className="custom-container">
         <div className="copyright">
           <p>
-            Copyright © 2026 Ronak Advertising. All Rights Reserved. Powered By
-            : <a href="#!">DIIGIIHOST</a>
+            Copyright © {year} Ronak Advertising. All Rights Reserved. Powered By
+            : <a href="https://digihost.in/" target="_blank">DIIGIIHOST</a>
           </p>
           <ul>
             <li>
-              <a href="#!">Trams & Condition</a>
+              <a href="#!">Terms & Condition</a>
             </li>
             <li>
               <a href="#!">Privacy Policy</a>

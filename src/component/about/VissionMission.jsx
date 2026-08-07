@@ -5,7 +5,7 @@ import mission from "../../assets/imgs/about/mission.png"
 const VissionMission = () => {
   return (
     <div className='vission p-70'>
-        <div className="custom-container">
+        <div className="why-container">
             <div className="row">
                 <div className="col-lg-5">
                     <div className="visson-cotent" data-gsap>

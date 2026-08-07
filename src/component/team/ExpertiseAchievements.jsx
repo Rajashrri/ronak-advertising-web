@@ -1,6 +1,6 @@
 import React from 'react'
 import Heading from '../reuse/Heading'
-
+import why1 from "../../assets/imgs/about/why1.png"
 const ExpertiseAchievements = () => {
     return (
         <div className='p-70'>
@@ -12,7 +12,7 @@ const ExpertiseAchievements = () => {
                 />
                 <div className="row">
                     <div className="col-lg-7">
-                        <div className="achievements-box">
+                        <div className="achievements-box hoverimg">
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                     <path d="M12 17V21M8 21H16M11 13C10.4501 12.9997 9.9108 12.8483 9.44112 12.5622C8.97144 12.2762 8.58942 11.8665 8.33681 11.3781C8.0842 10.8896 7.97072 10.3411 8.00876 9.79245C8.04681 9.24384 8.23492 8.71624 8.55254 8.26731C8.87016 7.81837 9.30506 7.46538 9.80973 7.24691C10.3144 7.02843 10.8694 6.95288 11.4141 7.0285C11.9588 7.10413 12.4723 7.32802 12.8983 7.67571C13.3244 8.0234 13.6467 8.48152 13.83 9H14C14.5304 9 15.0391 9.21071 15.4142 9.58579C15.7893 9.96086 16 10.4696 16 11C16 11.5304 15.7893 12.0391 15.4142 12.4142C15.0391 12.7893 14.5304 13 14 13H11ZM4 3H20C21.1046 3 22 3.89543 22 5V15C22 16.1046 21.1046 17 20 17H4C2.89543 17 2 16.1046 2 15V5C2 3.89543 2.89543 3 4 3Z" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
@@ -20,11 +20,14 @@ const ExpertiseAchievements = () => {
                                 <h3>Campaigns Managed</h3>
                             </div>
                             <h2>200+</h2>
+                             <figure>
+                                                            <img src={why1} alt="" />
+                                                        </figure>
 
                         </div>
                     </div>
                     <div className="col-lg-5">
-                        <div className="achievements-box">
+                        <div className="achievements-box hoverimg">
                             <div>
                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
   <path d="M5 22H19M5 2H19M17 22V17.828C16.9999 17.2976 16.7891 16.789 16.414 16.414L12 12M12 12L7.586 16.414C7.2109 16.789 7.00011 17.2976 7 17.828V22M12 12L7.586 7.586C7.2109 7.21101 7.00011 6.70239 7 6.172V2M12 12L16.414 7.586C16.7891 7.21101 16.9999 6.70239 17 6.172V2" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -32,11 +35,14 @@ const ExpertiseAchievements = () => {
                                 <h3>Years Experience</h3>
                             </div>
                             <h2>15+</h2>
+                             <figure>
+                                                            <img src={why1} alt="" />
+                                                        </figure>
 
                         </div>
                     </div>
                     <div className="col-lg-5">
-                        <div className="achievements-box">
+                        <div className="achievements-box hoverimg">
                             <div>
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
   <path d="M12.601 21.799C14.461 20.193 20 14.993 20 10C20 7.87827 19.1571 5.84344 17.6569 4.34315C16.1566 2.84285 14.1217 2 12 2C9.87827 2 7.84344 2.84285 6.34315 4.34315C4.84285 5.84344 4 7.87827 4 10C4 14.993 9.539 20.193 11.399 21.799C11.5723 21.9293 11.7832 21.9998 12 21.9998C12.2168 21.9998 12.4277 21.9293 12.601 21.799Z" stroke="#1A1A1A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -45,11 +51,14 @@ const ExpertiseAchievements = () => {
                                 <h3>Premium Locations</h3>
                             </div>
                             <h2>100+</h2>
+                             <figure>
+                                                            <img src={why1} alt="" />
+                                                        </figure>
 
                         </div>
                     </div>
                     <div className="col-lg-7">
-                        <div className="achievements-box">
+                        <div className="achievements-box hoverimg">
                             <div>
                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
                                         <g clip-path="url(#clip0_9316_319)">
@@ -64,6 +73,9 @@ const ExpertiseAchievements = () => {
                                 <h3>Successful Brand Promotions</h3>
                             </div>
                             <h2>1000+</h2>
+                             <figure>
+                                                            <img src={why1} alt="" />
+                                                        </figure>
 
                         </div>
                     </div>

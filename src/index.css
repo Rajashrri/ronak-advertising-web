@@ -2028,8 +2028,26 @@ a {
   gap: 110px;
   justify-content: space-between;
   height: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
+.achievements-box.hoverimg figure img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.achievements-box.hoverimg figure{
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+  margin-bottom: 0;
+  transition: all .3s linear;
+}
+.achievements-box.hoverimg:hover figure{
+  opacity: 1;
+
+}
 .achievements-box {
   padding: 24px;
   background: #fff;
@@ -2052,10 +2070,28 @@ a {
   text-transform: capitalize;
   margin-bottom: 0;
   margin-top: 10px;
+  position: relative;
+  z-index: 10;
+    transition: all .3s linear;
 }
 
+.achievements-box svg{
+    position: relative;
+  z-index: 10;
+    transition: all .3s linear;
+}
+.achievements-box.hoverimg:hover svg path{
+  stroke: #fff;
+}
+.achievements-box.hoverimg:hover h2{
+  color: #fff;
+}
+.achievements-box.hoverimg:hover h3{
+  color: #fff;
+}
 .achievements-box h2 {
   color: var(--P2, #FA0000);
+    transition: all .3s linear;
   font-feature-settings: 'liga' off, 'clig' off;
 
   /* Heading/H1 */
@@ -2064,6 +2100,8 @@ a {
   font-style: normal;
   font-weight: 400;
   line-height: 60px;
+    position: relative;
+  z-index: 10;
   /* 116.667% */
   letter-spacing: -1.06px;
   text-transform: capitalize;
@@ -2128,7 +2166,7 @@ a {
   padding: 238px 0;
 }
 
-.aboutcta button {
+.aboutcta a {
   z-index: 11;
   position: relative;
   background-color: #fff;
