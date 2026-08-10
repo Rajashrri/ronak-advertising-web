@@ -514,7 +514,7 @@ a {
   line-height: 22px;
   /* 110% */
   letter-spacing: 1.62px;
-  /* text-transform: uppercase; */
+  text-transform: uppercase;
   margin-bottom: 20px;
 }
 
