@@ -1020,6 +1020,16 @@ a {
   padding: 0px 40px 30px;
 }
 
+.blogcontent1 p{
+  color: var(--800, #898989);
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: var(--Ubuntu);
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 120%; /* 19.2px */
+text-transform: capitalize;
+}
 .blogcontent1 h3 {
   color: var(--900, #1A1A1A);
   font-feature-settings: 'liga' off, 'clig' off;
@@ -2659,25 +2669,29 @@ a {
 
 .shape {
   position: absolute;
-  left: -90px;
-  bottom: -30px;
+  left: 0px;
+  bottom: 0px;
   width: 360px;
   height: 300px;
   overflow: hidden;
-  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  /* clip-path: polygon(50% 0%, 100% 100%, 0% 100%); */
   z-index: 2;
 }
 
 .shape::before {
   content: "";
   position: absolute;
-  inset: -40px;
+  inset: 0px;
 
-  backdrop-filter: blur(20px);
+  /* backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 
   background: rgba(255, 255, 255, .60);
-  border: 1px solid rgba(255, 255, 255, .60);
+  border: 1px solid rgba(255, 255, 255, .60); */
+  background-image: url('data:image/svg+xml,<svg width="267" height="301" viewBox="0 0 267 301" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M67 0L267 350.412H-133L67 0Z" fill="white" fill-opacity="0.6"/><path d="M94.248 187.284H127.203V350.169H95.3384H94.8296H94.2722C65.5336 350.072 39.3636 342.851 15.8105 328.506C-3.67163 316.681 -18.574 302.19 -28.9451 285.034C-39.3162 267.854 -44.4775 248.76 -44.4775 227.775C-44.4775 191.888 -30.4959 162.035 -2.53275 138.191C24.655 115.22 57.8522 103.734 97.0589 103.734C107.454 103.734 117.486 104.63 127.203 106.448L127.033 133.03C117.244 130.801 106.897 129.662 95.92 129.662C81.6961 129.662 67.8841 132.133 54.5325 137.052C41.181 141.971 29.5013 149.023 19.5179 158.206C-0.933472 176.792 -11.1834 199.885 -11.1834 227.436C-11.1834 249.099 -5.07706 267.588 7.15986 282.902C17.8944 296.253 31.0764 306.528 46.6815 313.749C61.39 320.558 77.2375 324.144 94.248 324.532V187.284Z" fill="white" fill-opacity="0.8"/></svg>');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
 }
 
 .team-content {
@@ -2793,12 +2807,15 @@ a {
 .triangle {
   width: 350px;
   height: 300px;
-  background: #fff;
-  clip-path: polygon(50% 0%, 100% 100%, 0% 100%);
+  /* background: #fff; */
+  /* clip-path: polygon(50% 0%, 100% 100%, 0% 100%); */
   flex-shrink: 0;
   position: absolute;
   bottom: -10px;
   left: -70px;
+  background-repeat: no-repeat;
+  background-image: url('data:image/svg+xml,<svg width="340" height="298" viewBox="0 0 340 298" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M169.75 0L339.5 297.412H0L169.75 0Z" fill="white" fill-opacity="0.6"/><path d="M192.877 158.957H220.847V297.206H193.803H193.371H192.898C168.506 297.123 146.294 290.994 126.303 278.819C109.768 268.783 97.1194 256.484 88.3169 241.923C79.5145 227.341 75.1338 211.135 75.1338 193.324C75.1338 162.865 87.0007 137.527 110.734 117.29C133.81 97.7927 161.986 88.0442 195.263 88.0442C204.086 88.0442 212.6 88.8052 220.847 90.3476L220.703 112.909C212.395 111.017 203.613 110.05 194.296 110.05C182.224 110.05 170.501 112.148 159.169 116.323C147.836 120.498 137.923 126.483 129.45 134.278C112.092 150.052 103.392 169.652 103.392 193.036C103.392 211.423 108.575 227.115 118.961 240.113C128.072 251.445 139.26 260.165 152.505 266.294C164.989 272.073 178.439 275.117 192.877 275.446V158.957Z" fill="white" fill-opacity="0.8"/></svg>');
+
 
 }
 
