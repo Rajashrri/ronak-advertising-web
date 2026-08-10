@@ -138,7 +138,7 @@ const Details = () => {
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />
-                </svg>{" "}
+                </svg>  
                 {new Date(blog.date)
                   .toLocaleDateString("en-GB")
                   .replace(/\//g, "-")}
