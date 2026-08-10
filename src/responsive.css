@@ -319,7 +319,7 @@ margin-top: 14px;
     padding-right: 0;
 }
 .close-btn{
-    top: -60px;
+    top: 30px;
 }
 .review-section .row{
     gap: 40px 0;
@@ -664,7 +664,7 @@ text-transform: capitalize;
     }
     .startingpopup{
         padding: 24px;
-        padding-top: 100px;
+        /* padding-top: 100px; */
     }
     .team-grid {
     display: grid;
@@ -697,6 +697,8 @@ text-transform: capitalize;
           scale: 1;
   margin-top: 0px;
   margin-bottom:0px;
+  padding: 24px;
+  padding-top: 100px;
     }
     .ab2{
     }
