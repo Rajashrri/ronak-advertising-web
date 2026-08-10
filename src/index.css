@@ -3227,7 +3227,7 @@ text-transform: capitalize;
 .blog-container1 .blogd li {
   color: var(--800, #898989);
   font-feature-settings: 'liga' off, 'clig' off;
-  font-family: Ubuntu;
+  font-family: var(--Ubuntu);
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
