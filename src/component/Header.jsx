@@ -613,7 +613,7 @@ const Header = () => {
                           <div>
                             <button
                               type="submit"
-                              lass="btn m-0"
+                              class="btn m-0"
                               disabled={loading}
                             >
                               {loading ? "Submitting..." : "Submit"}
