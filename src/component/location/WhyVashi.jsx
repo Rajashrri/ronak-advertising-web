@@ -1,15 +1,39 @@
-import React from "react";
-import billboard from "../../assets/imgs/location/billboard.png";
+import React, { useEffect, useState } from "react";
+ import { useParams } from "react-router-dom";
+ import { getLocationBySlugApi } from "../../utils/frontApi";
+ import billboard from "../../assets/imgs/location/billboard.png";
 import shop from "../../assets/imgs/location/shop.png";
 import Heading from "../reuse/Heading";
 
 const WhyVashi = () => {
+
+
+  const { slug } = useParams(); 
+  const [location, setLocation] = useState(null); 
+  useEffect(() =>
+     { 
+      if (slug) {
+         fetchLocation(); 
+        } 
+      }, [slug]);
+       const fetchLocation = async () => 
+        {
+           try 
+           { const res = await getLocationBySlugApi(slug);
+             if (res.data.success) { setLocation(res.data.location);
+              
+             } } 
+             catch (error) { console.error("Location fetch error:", error); 
+
+             } 
+            }; 
+            if (!location) { return null; }
   return (
     <div className="container mt-5 wvsection">
     <div className="why-vashi">
       <div className="container">
          <Heading
-                                title="Why Vashi"
+                               title={`Why ${location.locationName}`}
                                 // subtitle="Socials"
                                 titleclass="text-black"
                             />
@@ -18,20 +42,20 @@ const WhyVashi = () => {
 
           {/* Left Image */}
           <div className="why-image " data-gsap>
-            <img src={billboard} alt="Billboard" />
+            <img src={location.image || billboard} alt="Billboard" />
           </div>
 
           {/* Right Cards */}
 
 
             <div className="stat-card white-card card-1" data-gsap>
-              <h3>15+</h3>
-              <p>Creative Campaigns Tailored To Your Brand's Voice</p>
+              <h3>{location.audience_reach || 0}+</h3>
+              <p>Daily Audience Reach</p>
             </div>
 
             <div className="stat-card traffic-card card-2" data-gsap>
-              <h3>1000</h3>
-              <p>Creative Campaigns Tailored To Your Brand's Voice</p>
+             <h3>{location.media_sites || 0}+</h3>
+              <p>Ronak Media Sites:</p>
             </div>
 
          
@@ -59,7 +83,7 @@ const WhyVashi = () => {
 
           {/* Bottom Right */}
           <div className="stat-card white-card card-5" data-gsap>
-            <h3>200+</h3>
+            <h3>{location.ideal || "-"}</h3>
             <p>Creative Campaigns Tailored To Your Brand's Voice</p>
           </div>
 
