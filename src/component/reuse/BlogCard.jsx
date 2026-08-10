@@ -60,6 +60,7 @@ const BlogCard = ({ data }) => {
           </ul>
 
           <h3>{data.title}</h3>
+          <p>Web designing in a powerful way of just n professions, however, </p>
         </div>
       </div>
 
