@@ -6,8 +6,9 @@ import {
   EffectCreative,
 } from "swiper/modules";
 
-import img1 from "../../assets/imgs/slider1.png";
-import img2 from "../../assets/imgs/slider2.png";
+import img1 from "../../assets/imgs/slider1.webp";
+import img2 from "../../assets/imgs/slider2.webp";
+import img3 from "../../assets/imgs/slider3.webp";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -30,7 +31,7 @@ const slides = [
   },
   {
     id: 3,
-    image: img1,
+    image: img3,
     title: "Digital Experience",
     subtitle: "Let's Create Together",
   },

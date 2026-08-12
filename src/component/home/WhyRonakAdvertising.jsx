@@ -1,9 +1,9 @@
 import React from 'react'
 import Heading from '../reuse/Heading'
-import billboard1 from "./../../assets/imgs/billboard/billboard1.png"
-import billboard2 from "./../../assets/imgs/billboard/billboard2.png"
+import billboard1 from "./../../assets/imgs/billboard/1.webp"
+import billboard2 from "./../../assets/imgs/billboard/2.webp"
 // import billboard3 from "./../assets/imgs/billboard/billboard3.png"
-import billboard3 from "./../../assets/imgs/billboard/billboard3.png"
+import billboard3 from "./../../assets/imgs/billboard/3.webp"
 const WhyRonakAdvertising = () => {
   return (
     <div className='p-70 avertising'>

@@ -1,8 +1,8 @@
 import React from 'react'
 import Heading from '../reuse/Heading'
-import culture1 from "../../assets/imgs/team/culture1.png"
-import culture2 from "../../assets/imgs/team/culture2.png"
-import culture3 from "../../assets/imgs/team/culture3.png"
+import culture1 from "../../assets/imgs/team/culture1.webp"
+import culture2 from "../../assets/imgs/team/culture2.webp"
+import culture3 from "../../assets/imgs/team/culture3.webp"
 
 const TeamCulture = () => {
   return (

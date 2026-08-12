@@ -1,5 +1,5 @@
 import React from 'react'
-import homeblogimg from "../../assets/imgs/blog/homeblog.png"
+import homeblogimg from "../../assets/imgs/blog/homeblog.webp"
 import Heading from '../reuse/Heading'
 const HomeAbout = () => {
   return (

@@ -1,5 +1,5 @@
 import React from 'react'
-import team from "../assets/imgs/breadcrumb/team.jpg"
+import team from "../assets/imgs/breadcrumb/team.webp"
 import Breadcrumb from '../component/reuse/BreadCrumb'
 import LeadershipTeam from '../component/team/LeadershipTeam'
 import CoreTeam from '../component/team/CoreTeam'
