@@ -6,7 +6,7 @@ import VissionMission from '../component/about/VissionMission'
 import WhyChooseUs from '../component/about/WhyChooseUs'
 import Achievements from '../component/about/Achievements'
 import AboutCTA from '../component/about/AboutCTA'
-import aboutimg from "../assets/imgs/breadcrumb/breadcrumb.png"
+import aboutimg from "../assets/imgs/breadcrumb/aboutus.jpg"
 
 const About = () => {
   return (

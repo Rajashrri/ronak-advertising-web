@@ -1,6 +1,6 @@
 import React from 'react'
 import Breadcrumb from '../component/reuse/BreadCrumb'
-import media from "../assets/imgs/breadcrumb/media.jpg"
+import media from "../assets/imgs/breadcrumb/casestudy.jpg"
 import CaseList from '../component/case-study/CaseList'
 
 const CaseStudy = () => {

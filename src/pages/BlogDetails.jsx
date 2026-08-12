@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Breadcrumb from '../component/reuse/BreadCrumb'
 import Listing from '../component/blog/Listing'
-import blogimg from "../assets/imgs/breadcrumb/blog-details.jpg"
+import blogimg from "../assets/imgs/breadcrumb/blog.jpg"
 import Details from '../component/blog/Details'
 import { getBlogDetailsApi } from "../utils/frontApi";
 

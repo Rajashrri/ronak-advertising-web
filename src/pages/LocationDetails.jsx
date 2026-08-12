@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import locationdimg from "../assets/imgs/breadcrumb/location-details.png";
+import locationdimg from "../assets/imgs/breadcrumb/location.jpg";
 import Breadcrumb from "../component/reuse/BreadCrumb";
 import LocationData from "../component/location/LocationData";
 import InquiryForm from "../component/location/InquiryForm";

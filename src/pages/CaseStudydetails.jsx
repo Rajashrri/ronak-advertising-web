@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import media from "../assets/imgs/breadcrumb/media.jpg";
+import media from "../assets/imgs/breadcrumb/casestudy.jpg";
 import Breadcrumb from "../component/reuse/BreadCrumb";
 import Casedata from "../component/case-study/Casedata";
 
