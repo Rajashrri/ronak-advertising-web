@@ -212,7 +212,7 @@ const Header = () => {
                   <a href="/team">Team</a>
                 </li>
                 <li className="has-submenu">
-                  <a href="/location">
+                  <a href="">
                     Locations
                     <svg
                       className="ms-1"
@@ -341,7 +341,7 @@ const Header = () => {
                 <a href="/team">Team</a>
               </li>
               <li className="has-submenu">
-                <a href="/location">
+                <a href="">
                   Locations
                   <svg
                     className="ms-1"
