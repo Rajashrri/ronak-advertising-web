@@ -62,6 +62,10 @@ export const locationEnquiryApi = (data) => {
 export const getTeamMembersApi = () => {
   return frontApi.get("/team-members");
 };
+
+export const getCoreTeamApi = () => {
+  return frontApi.get("/core-team");
+};
 export const popupEnquiryApi = (data) => {
   return frontApi.post("/popup-enquiry", data);
 };

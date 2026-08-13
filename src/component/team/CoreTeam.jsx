@@ -1,77 +1,73 @@
-import React from "react";
-// import "./CoreTeam.css";
-
-import img1 from "../../assets/imgs/team/core1.png";
-import img2 from "../../assets/imgs/team/core2.png";
-import img3 from "../../assets/imgs/team/core3.png";
+import React, { useEffect, useState } from "react";
 import Heading from "../reuse/Heading";
-
-const team = [
-  {
-    id: 1,
-    name: "JHONE DOE",
-    role: "BRAND DESIGNER",
-    image: img1,
-  },
-  {
-    id: 2,
-    name: "EMILY CLARK",
-    role: "ART DIRECTOR",
-    image: img2,
-  },
-  {
-    id: 3,
-    name: "MICHAEL BENNETT",
-    role: "PROJECT MANAGER",
-    image: img3,
-  },
-  {
-    id: 4,
-    name: "JHONE DOE",
-    role: "BRAND DESIGNER",
-    image: img1,
-  },
-  {
-    id: 5,
-    name: "EMILY CLARK",
-    role: "ART DIRECTOR",
-    image: img2,
-  },
-  {
-    id: 6,
-    name: "MICHAEL BENNETT",
-    role: "PROJECT MANAGER",
-    image: img3,
-  },
-];
+import { getCoreTeamApi } from "../../utils/frontApi";
 
 const CoreTeam = () => {
+  const [team, setTeam] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  const fetchCoreTeam = async () => {
+    try {
+      const response = await getCoreTeamApi();
+
+      if (response.data?.success) {
+        setTeam(response.data.data || []);
+      }
+    } catch (error) {
+      console.error("Failed to fetch core team:", error);
+      setTeam([]);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  useEffect(() => {
+    fetchCoreTeam();
+  }, []);
+
   return (
     <section className="core-team">
       <div className="custom-container">
 
-           <Heading
-                    title="Core Team"
-                    // subtitle="Latest Blog"
-                    titleclass="text-black text-center"
-                    />
+        <Heading
+          title="Core Team"
+          titleclass="text-black text-center"
+        />
 
-        <div className="core-grid">
-          {team.map((item) => (
-            <div className="core-card" key={item.id}>
-              <img src={item.image} alt={item.name} />
+        {loading ? (
+          <div className="text-center">
+            <p>Loading...</p>
+          </div>
+        ) : team.length === 0 ? (
+          <div className="text-center">
+            <p>No core team members found.</p>
+          </div>
+        ) : (
+          <div className="core-grid">
+            {team.map((item) => (
+              <div className="core-card" key={item._id}>
 
-              <div className="core-info">
+                <img
+                  src={item.image}
+                  alt={item.name}
+                />
 
-                <div className="core-content">
-                <div className="triangle"></div>
-                  <h3>{item.name}</h3>
-                  <p>{item.role}</p>
+                <div className="core-info">
+                  <div className="core-content">
+
+                    <div className="triangle"></div>
+
+                    <h3>{item.name}</h3>
+
+                    <p>{item.designation}</p>
+
+                  </div>
                 </div>
+
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        )}
 
       </div>
     </section>
