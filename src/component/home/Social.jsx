@@ -1,8 +1,8 @@
 import React from 'react'
 import Heading from '../reuse/Heading'
-import img1 from "../../assets/imgs/img1.png"
-import img2 from "../../assets/imgs/img2.png"
-import img3 from "../../assets/imgs/img3.png"
+import img1 from "../../assets/imgs/img1.webp"
+import img2 from "../../assets/imgs/img2.webp"
+import img3 from "../../assets/imgs/img3.webp"
 
 const Social = () => {
     return (

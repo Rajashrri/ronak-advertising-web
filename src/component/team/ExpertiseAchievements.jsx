@@ -1,6 +1,9 @@
 import React from 'react'
 import Heading from '../reuse/Heading'
 import why1 from "../../assets/imgs/about/why1.png"
+import ea1 from "../../assets/imgs/about/ea1.webp"
+import ea2 from "../../assets/imgs/about/ea2.webp"
+import ea4 from "../../assets/imgs/about/ea4.webp"
 const ExpertiseAchievements = () => {
     return (
         <div className='p-70'>
@@ -21,7 +24,7 @@ const ExpertiseAchievements = () => {
                             </div>
                             <h2>200+</h2>
                              <figure>
-                                                            <img src={why1} alt="" />
+                                                            <img src={ea1} alt="" />
                                                         </figure>
 
                         </div>
@@ -36,7 +39,7 @@ const ExpertiseAchievements = () => {
                             </div>
                             <h2>15+</h2>
                              <figure>
-                                                            <img src={why1} alt="" />
+                                                            <img src={ea2} alt="" />
                                                         </figure>
 
                         </div>
@@ -74,7 +77,7 @@ const ExpertiseAchievements = () => {
                             </div>
                             <h2>1000+</h2>
                              <figure>
-                                                            <img src={why1} alt="" />
+                                                            <img src={ea4} alt="" />
                                                         </figure>
 
                         </div>

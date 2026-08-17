@@ -1082,6 +1082,9 @@ text-transform: capitalize;
   margin-bottom: 30px;
 }
 
+.socalimg figure  img{
+   border-radius: 65px 0;
+}
 .socalimg figure {
   position: relative;
   width: fit-content;
