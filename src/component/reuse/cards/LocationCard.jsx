@@ -27,7 +27,7 @@ const LocationCard = ({ item }) => {
             <Link
               to={`/location-details/${item.slug}`}
               className="btn2 bg-white"
-            >
+            >View Details 
               <svg
                 width="13"
                 height="11"
