@@ -1029,7 +1029,7 @@ font-size: 16px;
 font-style: normal;
 font-weight: 400;
 line-height: 120%; /* 19.2px */
-text-transform: capitalize;
+text-transform: none;
 }
 .blogcontent1 h3 {
   color: var(--900, #1A1A1A);
@@ -3356,7 +3356,7 @@ box-shadow: 0 33px 9px 0 rgba(0, 0, 0, 0.00), 0 21px 9px 0 rgba(0, 0, 0, 0.01), 
   font-style: normal;
   font-weight: 400;
   line-height: 27px;
-  text-transform: capitalize;
+  text-transform: none;
   margin-top: 20px;
   margin-bottom: 0;
 }
