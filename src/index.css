@@ -3564,6 +3564,7 @@ text-transform: capitalize;
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 .blogcard2 img{
   border-radius: 0px;
