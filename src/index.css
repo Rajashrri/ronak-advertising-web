@@ -3557,6 +3557,12 @@ text-transform: capitalize;
   padding-top: 30px;
   padding-bottom: 0;
 }
+.blogcard2 figure{
+  background-color: #1A1A1A;
+}
+.blogcard2 img{
+  border-radius: 16px;
+}
 .blogcard2{
   border-radius: 16px;
 border: 1px solid var(--200, #CCC);
