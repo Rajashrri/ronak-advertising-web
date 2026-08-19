@@ -28,11 +28,7 @@ const LeadershipTeam = () => {
   return (
     <section className="team-section">
       <div className="custom-container">
-
-        <Heading
-          title="Leadership Team"
-          titleclass="text-black text-center"
-        />
+        <Heading title="Leadership Team" titleclass="text-black text-center" />
 
         {loading ? (
           <div className="text-center">
@@ -46,11 +42,7 @@ const LeadershipTeam = () => {
           <div className="team-grid">
             {team.map((member) => (
               <div className="team-card" key={member._id}>
-
-                <img
-                  src={member.image}
-                  alt={member.name}
-                />
+                <img src={member.image} alt={member.name} />
 
                 {member.linkedin && member.linkedin !== "#" && (
                   <a
@@ -76,27 +68,23 @@ const LeadershipTeam = () => {
 
                 <div className="team-overlay">
                   <div className="team-content">
-
                     <h3>{member.name}</h3>
 
                     <p>
                       {member.designation}
 
-                      <span>
-                        +{member.experience} YEARS OF EXPERIENCE
-                      </span>
+                      {member.experience && (
+                        <span>+{member.experience} YEARS OF EXPERIENCE</span>
+                      )}
                     </p>
-
                   </div>
                 </div>
 
                 <div className="shape"></div>
-
               </div>
             ))}
           </div>
         )}
-
       </div>
     </section>
   );
