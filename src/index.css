@@ -3533,7 +3533,7 @@ font-size: 18px;
 font-style: normal;
 font-weight: 400;
 line-height: 27px; /* 150% */
-text-transform: capitalize;
+text-transform: none;
 display: -webkit-box;
 -webkit-box-orient: vertical;
 -webkit-line-clamp: 2;
