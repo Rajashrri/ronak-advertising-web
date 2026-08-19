@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Heading from "../reuse/Heading";
 import blog1 from "../../assets/imgs/blog/blog.png";
-import MediaCard from "../reuse/MediaCard";
+import MediaCard2 from "../reuse/MediaCard2";
 import { getFeaturedMediaApi } from "../../utils/frontApi";
 
 const FeaturedMediaHighlights = () => {
@@ -35,7 +35,7 @@ const FeaturedMediaHighlights = () => {
           {blogs.map((item, index) => {
             return (
               <div className="col-lg-6" data-gsap key={index}>
-                <MediaCard
+                <MediaCard2
                   data={{
                     image: item.image,
                     date: new Date(item.publishedDate).toLocaleDateString(

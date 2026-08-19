@@ -6,33 +6,40 @@ import "swiper/css";
 
 import img1 from "../../assets/imgs/about/01.png";
 import img2 from "../../assets/imgs/about/02.png";
-import img3 from "../../assets/imgs/about/01.png";
-import img4 from "../../assets/imgs/about/02.png";
+import img3 from "../../assets/imgs/about/03.jpg";
+import img4 from "../../assets/imgs/about/04.jpg";
+import img5 from "../../assets/imgs/about/05.jpg";
 
 const slides = [
   {
     year: "2019",
-    title: "Company Started",
+    title: "The Inception",
     image: img1,
     disc: "Founded over 33 years ago by Amardeep Singh Vig as a humble venture focused on cable TV ads and short films."
   },
   {
     year: "2020",
-    title: "New Office",
+    title: "Pioneering OOH in Navi Mumbai",
     image: img2,
     disc: "Identified early potential in suburban infrastructure and built the foundation for Out-of-Home media network coverage across Navi Mumbai and Thane district."
   },
   {
     year: "2021",
-    title: "A Milestone Achieved",
+    title: "INS Accreditation",
     image: img3,
-    disc: "Founded over 33 years ago by Amardeep Singh Vig as a humble venture focused on cable TV ads and short films."
+    disc: "Became the first advertising agency in Navi Mumbai to earn official accreditation from the Indian Newspaper Society (INS)."
   },
   {
     year: "2022",
-    title: "Expansion",
+    title: "360-Degree Expansion",
     image: img4,
-    disc: "Identified early potential in suburban infrastructure and built the foundation for Out-of-Home media network coverage across Navi Mumbai and Thane district."
+    disc: "Evolved into a multi-channel agency providing Print, Radio, TV, Below-the-Line (BTL) activations, Transit Media, and Digital OOH solutions alongside nationwide branch expansion."
+  },
+  {
+    year: "2022",
+    title: "Next-Gen Leadership",
+    image: img5,
+    disc: "Expanded executive leadership with COO Ronak Singh Vig (Cass Business School, London alumnus) driving modern operational practices and digital media growth."
   }
 ];
 

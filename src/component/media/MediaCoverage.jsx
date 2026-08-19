@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Heading from "../reuse/Heading";
-import MediaCard from "../reuse/MediaCard";
+import MediaCard2 from "../reuse/MediaCard2";
 import { getMediaCoverageApi } from "../../utils/frontApi";
 
 const MediaCoverage = () => {
@@ -35,7 +35,7 @@ const MediaCoverage = () => {
           {media.map((item, index) => {
             return (
               <div className="col-lg-6" data-gsap key={index}>
-                <MediaCard
+                <MediaCard2
                   data={{
                     image: item.image,
                     date: new Date(item.publishedDate).toLocaleDateString(
