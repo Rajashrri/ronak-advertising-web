@@ -65,7 +65,11 @@ export default function TestimonialSlider() {
                 </div>
 
                 <div className="user-info">
-                 src={item.image || profile}
+                  <img
+                   src={item.image || profile}
+                    alt={item.name}
+                  />
+                
 
                   <div>
                     <h4>{item.name}</h4>
