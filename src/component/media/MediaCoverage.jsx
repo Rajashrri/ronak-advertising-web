@@ -34,7 +34,7 @@ const MediaCoverage = () => {
         <div className="row mt-4">
           {media.map((item, index) => {
             return (
-              <div className="col-lg-4" data-gsap key={index}>
+              <div className="col-lg-4 col-md-6" data-gsap key={index}>
                 <MediaCard2
                   data={{
                     image: item.image,
