@@ -7,7 +7,7 @@ const MediaCard2 = ({ data }) => {
         <figure className="mediaimg1">
           <img src={data.image} alt="" />
         </figure>
-        <div className="blogcontent1 mediadata">
+        {/* <div className="blogcontent1 mediadata">
           <div className="date">
             <svg
               width="11"
@@ -57,18 +57,18 @@ const MediaCard2 = ({ data }) => {
           </ul>
           <h3>{data.title}</h3>
           <p>{data.discription}</p>
-        </div>
+        </div> */}
       </div>
 
-      {data.button && (
-        <div className="awrap">
-          <button
-      className="btn2"
-      onClick={(e) => {
-        e.preventDefault();
-        window.open(data.link, "_blank", "noopener,noreferrer");
-      }}
-    >
+              {/* {data.button && (
+                <div className="awrap">
+                  <button
+              className="btn2"
+              onClick={(e) => {
+                e.preventDefault();
+                window.open(data.link, "_blank", "noopener,noreferrer");
+              }}
+            >
             Read More
             <svg
               width="13"
@@ -84,7 +84,7 @@ const MediaCard2 = ({ data }) => {
             </svg>
           </button>
         </div>
-      )}
+      )} */}
     </a>
   );
 };
