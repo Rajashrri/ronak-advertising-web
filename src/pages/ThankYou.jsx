@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import thankyou from ".././assets/imgs/thankyou.svg"
 const ThankYou = () => {
+      useEffect(() => {
+        document.title = "Thank you | Ronak Advertising";
+      }, []);
   return (
     <div className='p-70 pb-0 errorcontainer'>
         <div className="custom-container">

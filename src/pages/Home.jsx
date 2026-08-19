@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Hero from '../component/home/Hero'
 import WhyRonakAdvertising from '../component/home/WhyRonakAdvertising'
 import AtGlance from '../component/home/AtGlance'
@@ -12,6 +12,9 @@ import ClientSlider from '../component/home/ClientSlider'
 import LocationSlider from '../component/home/LocationSlider'
 
 const Home = () => {
+    useEffect(() => {
+      document.title = "Home | Ronak Advertising";
+    }, []);
   return (
     <>
     <div className="container">

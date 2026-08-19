@@ -1,6 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import errorimg from ".././assets/imgs/error.svg"
 const Error = () => {
+      useEffect(() => {
+        document.title = "404 | Ronak Advertising";
+      }, []);
   return (
     <div className='p-70 pb-0 errorcontainer'>
         <div className="custom-container">

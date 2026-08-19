@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Breadcrumb from '../component/reuse/BreadCrumb'
 import CompanyOverview from '../component/about/CompanyOverview'
 import TimelineSlider from '../component/about/TimelineSlider'
@@ -9,6 +9,9 @@ import AboutCTA from '../component/about/AboutCTA'
 import aboutimg from "../assets/imgs/breadcrumb/aboutus.jpg"
 
 const About = () => {
+    useEffect(() => {
+    document.title = "About Us | Ronak Advertising";
+  }, []);
   return (
     <>
       <Breadcrumb
