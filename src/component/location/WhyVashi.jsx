@@ -55,7 +55,7 @@ const WhyVashi = () => {
 
             <div className="stat-card traffic-card card-2" data-gsap>
              <h3>{location.media_sites || 0}+</h3>
-              <p>Ronak Media Sites:</p>
+              <p>Ronak Media Sites</p>
             </div>
 
          
