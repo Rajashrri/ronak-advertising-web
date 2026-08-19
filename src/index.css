@@ -3561,9 +3561,13 @@ text-transform: capitalize;
   background-color: #1A1A1A;
   border-radius: 16px;
   padding: 8px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .blogcard2 img{
   border-radius: 0px;
+  object-fit: contain;
 }
 .blogcard2{
   border-radius: 16px;
