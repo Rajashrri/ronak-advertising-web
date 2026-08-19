@@ -57,30 +57,28 @@ const LocationData = () => {
         />
       </Helmet>
       <div className="p-70">
-        <div className="custom-container">
-          <Heading
-            title="Drone Video Showcase"
-            // subtitle="Socials"
-            titleclass="text-black"
-          />
-        </div>
-        <div className="container detail-cideo">
-          {location.ytVideoLink ? (
-            <iframe
-              width="100%"
-              height="500"
-              src={location.ytVideoLink.replace("watch?v=", "embed/")}
-              title="Drone Video"
-              allowFullScreen
-            />
-          ) : (
-            <p>No Video Available</p>
-          )}
-          <h4 data-gsap>
-            “Experience the real visibility and impact of this advertising
-            location.”
-          </h4>
-        </div>
+        {location.ytVideoLink && (
+          <>
+            <div className="custom-container">
+              <Heading title="Drone Video Showcase" titleclass="text-black" />
+            </div>
+
+            <div className="container detail-cideo">
+              <iframe
+                width="100%"
+                height="500"
+                src={location.ytVideoLink.replace("watch?v=", "embed/")}
+                title="Drone Video"
+                allowFullScreen
+              />
+
+              <h4 data-gsap>
+                “Experience the real visibility and impact of this advertising
+                location.”
+              </h4>
+            </div>
+          </>
+        )}
         <div className="p-70">
           <div className="custom-container">
             <Heading
