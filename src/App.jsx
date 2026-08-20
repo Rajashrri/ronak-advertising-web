@@ -32,7 +32,7 @@
     useEffect(() => {
       setTimeout(() => {
         setLoading(false);
-      }, 2000);
+      }, 5000);
     }, []);
 
     if (loading) {
@@ -44,6 +44,7 @@
             autoPlay
             muted
             playsInline
+            loop
           />
           </div>
         </div>
