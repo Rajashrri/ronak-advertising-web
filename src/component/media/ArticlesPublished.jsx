@@ -21,7 +21,10 @@ const ArticlesPublished = () => {
       console.error(error);
     }
   };
-
+  // No articles => don't render section
+  if (!articles || articles.length === 0) {
+    return null;
+  }
   return (
     <div className="p-70 media">
       <div className="custom-container">
