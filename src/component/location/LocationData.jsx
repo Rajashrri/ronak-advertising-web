@@ -10,6 +10,15 @@ import { Helmet } from "react-helmet-async";
 const LocationData = () => {
   const { slug } = useParams();
 
+    useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+
+    fetchDetail();
+  }, [slug]);
+
   const [location, setLocation] = useState(null);
   const [relatedLocations, setRelatedLocations] = useState([]);
   useEffect(() => {
