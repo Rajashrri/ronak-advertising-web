@@ -14,10 +14,60 @@ const RelatedLocations = ({ locations = [] }) => {
   return (
     <div className="p-70">
       <div className="custom-container">
-        <Heading
+        <div className="newhedf">
+              <Heading
           title="Related Locations"
           titleclass="text-black"
         />
+
+              {/* Navigation */}
+          <div className="related-location-navigation">
+            <button
+              type="button"
+              className="related-location-prev"
+              aria-label="Previous location"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M15 18L9 12L15 6"
+                  stroke="#FA0000"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+
+            <button
+              type="button"
+              className="related-location-next"
+              aria-label="Next location"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+              >
+                <path
+                  d="M9 18L15 12L9 6"
+                  stroke="#FA0000"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
+        </div>
+      
 
         <div className="related-location-slider-wrapper">
           <Swiper
@@ -64,52 +114,7 @@ const RelatedLocations = ({ locations = [] }) => {
             ))}
           </Swiper>
 
-          {/* Navigation */}
-          <div className="related-location-navigation">
-            <button
-              type="button"
-              className="related-location-prev"
-              aria-label="Previous location"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path
-                  d="M15 18L9 12L15 6"
-                  stroke="#FA0000"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-
-            <button
-              type="button"
-              className="related-location-next"
-              aria-label="Next location"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-              >
-                <path
-                  d="M9 18L15 12L9 6"
-                  stroke="#FA0000"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-          </div>
+        
         </div>
       </div>
     </div>
