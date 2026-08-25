@@ -3041,6 +3041,9 @@ box-shadow: 0 33px 9px 0 rgba(0, 0, 0, 0.00), 0 21px 9px 0 rgba(0, 0, 0, 0.01), 
   letter-spacing: -0.76px;
   text-transform: capitalize;
 }
+.related-location-slider{
+  padding: 30px 0;
+}
 
 .detail-box .boxw {
   border-radius: 16px;
