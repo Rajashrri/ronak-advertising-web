@@ -3064,7 +3064,7 @@ box-shadow: 0 33px 9px 0 rgba(0, 0, 0, 0.00), 0 21px 9px 0 rgba(0, 0, 0, 0.01), 
   text-transform: capitalize;
   margin-bottom: 24px;
 }
-.newhedf .button{
+.newhedf button{
   border-radius: 100px;
 background: #FFF;
 display: flex;
