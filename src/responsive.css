@@ -415,6 +415,9 @@ margin-top: 14px;
     .billcont{
         padding: 0;
     }
+    .newhedf{
+        flex-direction: column;
+    }
   
   
    
