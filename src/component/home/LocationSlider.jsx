@@ -96,7 +96,6 @@ export default function LocationSlider() {
                     {group.map((item, i) => (
                       <a href="#!" className="location-card" key={i}>
 
-                        <p>{item}</p>
                         <div className="locadeta">
                           <div className="locacrad">
                             <h4>70+</h4>
