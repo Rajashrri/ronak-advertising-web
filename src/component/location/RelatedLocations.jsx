@@ -17,7 +17,7 @@ const RelatedLocations = ({ locations = [] }) => {
         <div className="newhedf">
               <Heading
           title="Related Locations"
-          titleclass="text-black"
+          titleclass="text-black mb-0"
           className="mb-0"
         />
 
