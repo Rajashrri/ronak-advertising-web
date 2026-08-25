@@ -3074,7 +3074,7 @@ background: #FFF;
 display: flex;
 width: 64px;
 height: 64px;
-padding: 24px;
+/* padding: 24px; */
 justify-content: center;
 align-items: center;
 border: none;
