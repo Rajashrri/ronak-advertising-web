@@ -10,6 +10,7 @@ import HomeBlog from '../component/home/HomeBlog'
 import Social from '../component/home/Social'
 import ClientSlider from '../component/home/ClientSlider'
 import LocationSlider from '../component/home/LocationSlider'
+import VideoSlider from '../component/home/VideoSlider'
 
 const Home = () => {
     useEffect(() => {
@@ -25,6 +26,7 @@ const Home = () => {
     <HomeAbout/>
     <WatchSomeVideo/>
     <LocationSlider/>
+    <VideoSlider/>
     <TestimonialSlider/>
     <ClientSlider/>
     <HomeVideo/>

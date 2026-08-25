@@ -63,7 +63,7 @@ const Hero = () => {
       <div className="herocontainer">
         <div className="herohead">
           <h1>
-            THE PIONEERS OF OUTDOOR. <br />
+           THE PIONEERS OF OUTDOOR IN NAVI MUMBAI<br />
             <span>THE STANDARD</span> FOR IMPACT.
           </h1>
         </div>
@@ -71,7 +71,7 @@ const Hero = () => {
         <div className="row g-0">
           <div className="col-lg-4">
             <div className="billcont">
-              <h3>32+</h3>
+              <h3>33+</h3>
               <p>
                Years of shaping Navi Mumbai’s outdoor landscape and helping brands command attention across its most valuable locations.
               </p>

@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import { getLocationsApi, popupEnquiryApi } from "../utils/frontApi";
 import Heading from "./reuse/Heading";
 import formimg from "../assets/imgs/formimg.png";
+import menu from "../assets/imgs/menu.png";
 import { useLocation } from "react-router-dom";
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -230,7 +231,7 @@ const Header = () => {
                   </a>
 
                   <div className="mega-menu">
-                    <div className="mega-grid">
+                    {/* <div className="mega-grid">
                       {locations.map((item) => {
                         return (
                           <a key={item._id} href={`/location/${item.slug}`}>
@@ -238,7 +239,44 @@ const Header = () => {
                           </a>
                         );
                       })}
+                    </div> */}
+                    <div className="row">
+                      <div className="col-lg-8">
+                        <div class="mega-grid">
+                          {/* <a className="active" href="/location/vashi">Vashi</a>
+                          <a href="/location/atal-setu">Atal Setu</a>
+                          <a href="/location/turbhe">Turbhe</a>
+                          <a href="/location/seawoods">Seawoods</a>
+                          <a href="/location/sanpada">Sanpada</a>
+                          <a href="/location/rabale">Rabale</a>
+                          <a href="/location/panvel">Panvel</a>
+                          <a href="/location/kharghar">Kharghar</a>
+                          <a href="/location/khandeshwar">Khandeshwar</a>
+                          <a href="/location/ghansoli">Ghansoli</a>
+                          <a href="/location/expressway">Expressway</a>
+                          <a href="/location/cbd-belapur">CBD Belapur</a>
+                          <a href="/location/nerul">Nerul</a>
+                          <a href="/location/kalamboli">Kalamboli</a> */}
+
+                             {locations.map((item) => {
+                            return (
+                              <a key={item._id} href={`/location/${item.slug}`}>
+                                {item.locationName}
+                              </a>
+                            );
+                          })}
+                        </div>
+                      </div>
+                      <div className="col-lg-4">
+                        <div className="menuimg">
+                          <figure>
+                            <img src={menu} alt="" />
+                          </figure>
+
+                        </div>
+                      </div>
                     </div>
+                  
                   </div>
                 </li>
                 <li>

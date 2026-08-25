@@ -71,8 +71,8 @@ export default function TimelineSlider() {
           centeredSlides={false}
           slidesPerView={2}
           spaceBetween={30}
-          initialSlide={2}
-          loop={true}
+          // initialSlide={2}
+          // loop={true}
           speed={1000}
           autoplay={{
             delay: 3000,

@@ -1877,7 +1877,15 @@ border: 3px solid var(--200, #CCC);
 .timelineslidermail {
   /* border-radius: 20px; */
 }
-
+.timelineslidermail .swiper-slide{
+  transition: all .3s linear;
+}
+.timelineslidermail .swiper-slide-active.swiper-slide .timeline-card h4{
+  color: var(--P2, #FA0000);
+}
+.timelineslidermail .swiper-slide-active.swiper-slide:first-child{
+  margin-left: 200px;
+}
 .timeline-card p{
   color: var(--700, #2C2C2C);
 font-feature-settings: 'liga' off, 'clig' off;
@@ -1892,7 +1900,7 @@ text-transform: none;
 }
 .timeline-card h4 {
   margin-top: 15px;
- color: var(--P2, #FA0000);
+ color: var(--P2, #1A1A1A);
 font-feature-settings: 'liga' off, 'clig' off;
 
 /* Heading/H3 */
@@ -2736,13 +2744,7 @@ box-shadow: 0 33px 9px 0 rgba(0, 0, 0, 0.00), 0 21px 9px 0 rgba(0, 0, 0, 0.01), 
   content: "";
   position: absolute;
   inset: 0px;
-
-  /* backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-
-  background: rgba(255, 255, 255, .60);
-  border: 1px solid rgba(255, 255, 255, .60); */
-  background-image: url('data:image/svg+xml,<svg width="267" height="301" viewBox="0 0 267 301" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M67 0L267 350.412H-133L67 0Z" fill="white" fill-opacity="0.6"/><path d="M94.248 187.284H127.203V350.169H95.3384H94.8296H94.2722C65.5336 350.072 39.3636 342.851 15.8105 328.506C-3.67163 316.681 -18.574 302.19 -28.9451 285.034C-39.3162 267.854 -44.4775 248.76 -44.4775 227.775C-44.4775 191.888 -30.4959 162.035 -2.53275 138.191C24.655 115.22 57.8522 103.734 97.0589 103.734C107.454 103.734 117.486 104.63 127.203 106.448L127.033 133.03C117.244 130.801 106.897 129.662 95.92 129.662C81.6961 129.662 67.8841 132.133 54.5325 137.052C41.181 141.971 29.5013 149.023 19.5179 158.206C-0.933472 176.792 -11.1834 199.885 -11.1834 227.436C-11.1834 249.099 -5.07706 267.588 7.15986 282.902C17.8944 296.253 31.0764 306.528 46.6815 313.749C61.39 320.558 77.2375 324.144 94.248 324.532V187.284Z" fill="white" fill-opacity="0.8"/></svg>');
+  background-image: url('data:image/svg+xml,<svg width="400" height="351" viewBox="0 0 400 351" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M200 0L400 350.412H0L200 0Z" fill="white" fill-opacity="0.6"/><path d="M222.726 187.55H255.68V350.435H223.816H223.307H222.75C194.011 350.338 167.841 343.117 144.288 328.772C124.806 316.947 109.904 302.456 99.5324 285.3C89.1613 268.12 84 249.026 84 228.041C84 192.154 97.9816 162.301 125.945 138.457C153.133 115.486 186.33 104 225.536 104C235.932 104 245.964 104.897 255.68 106.714L255.511 133.296C245.721 131.067 235.374 129.928 224.398 129.928C210.174 129.928 196.362 132.399 183.01 137.318C169.658 142.237 157.979 149.289 147.995 158.472C127.544 177.058 117.294 200.151 117.294 227.702C117.294 249.365 123.4 267.854 135.637 283.168C146.372 296.52 159.554 306.794 175.159 314.015C189.868 320.824 205.715 324.41 222.726 324.798V187.55Z" fill="white" fill-opacity="0.8"/></svg>');
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left;
@@ -2868,7 +2870,8 @@ box-shadow: 0 33px 9px 0 rgba(0, 0, 0, 0.00), 0 21px 9px 0 rgba(0, 0, 0, 0.01), 
   bottom: -10px;
   left: -70px;
   background-repeat: no-repeat;
-  background-image: url('data:image/svg+xml,<svg width="340" height="298" viewBox="0 0 340 298" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M169.75 0L339.5 297.412H0L169.75 0Z" fill="white" fill-opacity="0.6"/><path d="M192.877 158.957H220.847V297.206H193.803H193.371H192.898C168.506 297.123 146.294 290.994 126.303 278.819C109.768 268.783 97.1194 256.484 88.3169 241.923C79.5145 227.341 75.1338 211.135 75.1338 193.324C75.1338 162.865 87.0007 137.527 110.734 117.29C133.81 97.7927 161.986 88.0442 195.263 88.0442C204.086 88.0442 212.6 88.8052 220.847 90.3476L220.703 112.909C212.395 111.017 203.613 110.05 194.296 110.05C182.224 110.05 170.501 112.148 159.169 116.323C147.836 120.498 137.923 126.483 129.45 134.278C112.092 150.052 103.392 169.652 103.392 193.036C103.392 211.423 108.575 227.115 118.961 240.113C128.072 251.445 139.26 260.165 152.505 266.294C164.989 272.073 178.439 275.117 192.877 275.446V158.957Z" fill="white" fill-opacity="0.8"/></svg>');
+  background-image: url('data:image/svg+xml,<svg width="400" height="351" viewBox="0 0 400 351" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M200 0L400 350.412H0L200 0Z" fill="white" fill-opacity="0.6"/><path d="M222.726 187.55H255.68V350.435H223.816H223.307H222.75C194.011 350.338 167.841 343.117 144.288 328.772C124.806 316.947 109.904 302.456 99.5324 285.3C89.1613 268.12 84 249.026 84 228.041C84 192.154 97.9816 162.301 125.945 138.457C153.133 115.486 186.33 104 225.536 104C235.932 104 245.964 104.897 255.68 106.714L255.511 133.296C245.721 131.067 235.374 129.928 224.398 129.928C210.174 129.928 196.362 132.399 183.01 137.318C169.658 142.237 157.979 149.289 147.995 158.472C127.544 177.058 117.294 200.151 117.294 227.702C117.294 249.365 123.4 267.854 135.637 283.168C146.372 296.52 159.554 306.794 175.159 314.015C189.868 320.824 205.715 324.41 222.726 324.798V187.55Z" fill="white" fill-opacity="0.8"/></svg>');
+  /* background-image: url('data:image/svg+xml,<svg width="340" height="298" viewBox="0 0 340 298" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M169.75 0L339.5 297.412H0L169.75 0Z" fill="white" fill-opacity="0.6"/><path d="M192.877 158.957H220.847V297.206H193.803H193.371H192.898C168.506 297.123 146.294 290.994 126.303 278.819C109.768 268.783 97.1194 256.484 88.3169 241.923C79.5145 227.341 75.1338 211.135 75.1338 193.324C75.1338 162.865 87.0007 137.527 110.734 117.29C133.81 97.7927 161.986 88.0442 195.263 88.0442C204.086 88.0442 212.6 88.8052 220.847 90.3476L220.703 112.909C212.395 111.017 203.613 110.05 194.296 110.05C182.224 110.05 170.501 112.148 159.169 116.323C147.836 120.498 137.923 126.483 129.45 134.278C112.092 150.052 103.392 169.652 103.392 193.036C103.392 211.423 108.575 227.115 118.961 240.113C128.072 251.445 139.26 260.165 152.505 266.294C164.989 272.073 178.439 275.117 192.877 275.446V158.957Z" fill="white" fill-opacity="0.8"/></svg>'); */
 
 
 }
@@ -3698,7 +3701,8 @@ text-transform: capitalize;
     left:50%;
     transform:translateX(-50%);
     background:#fff;
-    width:fit-content;
+    max-width:1283px;
+    width: 100%;
     padding:16px;
     border-radius:12px;
     box-shadow:0 15px 40px rgba(0,0,0,.15);
@@ -3708,7 +3712,38 @@ text-transform: capitalize;
     transition:.3s;
     z-index:999;
 }
-
+.videoslidermain .vode0-card img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.videoslidermain .vode0-card{
+  border-radius: 20px;
+border: 1px solid #DD2B1C;
+overflow: hidden;
+}
+.videoslidermain .swiper-pagination{
+ justify-content: center;
+ position: relative  !important;
+ padding-top: 20px;
+ width: 100%;
+ left: 0 !important;
+}
+.vode0-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.vode0-card a{
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .has-submenu:hover .mega-menu{
     opacity:1;
     visibility:visible;
@@ -3721,32 +3756,49 @@ text-transform: capitalize;
     gap:10px;
 }
 
-.mega-grid a{
-  color: var(--900, #1A1A1A);
+.menulist .mega-grid a{
+  color: var(--900, #2C2C2C);
 text-align: center;
 font-feature-settings: 'liga' off, 'clig' off;
         display: flex;
         align-items: center;
         justify-content: center;
 
-/* navigation */
-font-family: var(--Ubuntu);
-font-size: 20px;
-font-style: normal;
-font-weight: 400;
-line-height: 22px; /* 110% */
-text-transform: capitalize;
-    transition:.3s;
-    white-space:nowrap;
+        font-family: var(--bebas-neue);
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 30px; /* 125% */
+        letter-spacing: -0.6px;
+        text-transform: capitalize;
+
+
     min-height: 45px;
+    transition: all .3s linear;
+    border-radius: 8px;
 }
 
-.mega-grid a:hover{
-    color:#FA0000;
+.mega-grid a:hover,
+.mega-grid a.active{
+background: var(--P2, #FA0000);
+color: var(--White, #FFF);
 }
 
 .whatcv.input button{
   width: 120px;
+}
+.menuimg{
+  padding: 10px;
+  border-radius: 8px;
+border: 1px solid var(--800, #898989);
+}
+.menuimg figure{
+  border-radius: 8px;
+  margin-bottom: 0;
+}
+.menuimg figure img{
+  height: 100%;
+  width: 100%;
 }
 /* *************************************************** */
 
