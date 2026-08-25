@@ -2952,11 +2952,11 @@ box-shadow: 0 33px 9px 0 rgba(0, 0, 0, 0.00), 0 21px 9px 0 rgba(0, 0, 0, 0.01), 
   height: 100%;
   object-fit: cover;
   border-radius: 20px;
+  border: 1px solid #D9D9D9;
 }
 
 .teamculture figure {
   margin-bottom: 0;
-  border: 1px solid #D9D9D9;
 }
 
 .detail-cideo figure {
@@ -3033,7 +3033,7 @@ box-shadow: 0 33px 9px 0 rgba(0, 0, 0, 0.00), 0 21px 9px 0 rgba(0, 0, 0, 0.01), 
 
   /* Heading/H2 */
   font-family: var(--bebas-neue);
-  font-size: 40px;
+  font-size: 28px;
   font-style: normal;
   font-weight: 400;
   line-height: 45px;
@@ -3069,7 +3069,7 @@ box-shadow: 0 33px 9px 0 rgba(0, 0, 0, 0.00), 0 21px 9px 0 rgba(0, 0, 0, 0.01), 
 
   /* Heading/H2 */
   font-family: var(--bebas-neue);
-  font-size: 40px;
+  font-size: 28px;
   font-style: normal;
   font-weight: 400;
   line-height: 45px;
