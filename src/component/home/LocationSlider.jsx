@@ -94,7 +94,9 @@ export default function LocationSlider() {
                 <SwiperSlide key={index}>
                   <div className="location-grid">
                     {group.map((item, i) => (
-                      <div className="location-card" key={i}>
+                      <a href="#!" className="location-card" key={i}>
+
+                        <p>{item}</p>
                         <div className="locadeta">
                           <div className="locacrad">
                             <h4>70+</h4>
@@ -112,7 +114,7 @@ export default function LocationSlider() {
                         <img src={item.image} alt={item.locationName} />
                         <div className="overlay"></div>
                         <h3>{item.locationName}</h3>
-                      </div>
+                      </a>
                     ))}
                   </div>
                 </SwiperSlide>
