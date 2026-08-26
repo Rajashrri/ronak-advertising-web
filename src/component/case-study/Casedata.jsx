@@ -350,41 +350,47 @@ const Casedata = ({ setCaseName }) => {
           />
         </div>
       </div>
-      <div className="p-70 castestimonial">
-        <div className="custom-container">
-          <Heading
-            title="Client Testimonial"
-            // subtitle="Socials"
-            titleclass="text-black"
-          />
-        </div>
-        <TestimonialSlider2 />
-      </div>
-      <div className="p-70 pt-0 caserelatedblog">
-        <div className="custom-container casestudylistrow">
-          <Heading
-            title="Related Case Studies"
-            // subtitle="Socials"
-            titleclass="text-black"
-          />
 
-          <div className="row mt-3">
-            {relatedCases.map((item) => (
-              <div className="col-lg-6" key={item._id}>
-                <CaseStudyCard
-                  data={{
-                    image: item.featuredImage,
-                    title: item.name,
-                    comments: item.industry,
-                    discription: item.briefIntro,
-                    slug: item.slug,
-                  }}
-                />
-              </div>
-            ))}
+      {caseStudy?.testimonial?.length > 0 && (
+        <div className="p-70 castestimonial">
+          <div className="custom-container">
+            <Heading
+              title="Client Testimonial"
+              // subtitle="Socials"
+              titleclass="text-black"
+            />
+          </div>
+          <TestimonialSlider2 />
+        </div>
+      )}
+
+      {relatedCases?.length > 0 && (
+        <div className="p-70 pt-0 caserelatedblog">
+          <div className="custom-container casestudylistrow">
+            <Heading
+              title="Related Case Studies"
+              // subtitle="Socials"
+              titleclass="text-black"
+            />
+
+            <div className="row mt-3">
+              {relatedCases.map((item) => (
+                <div className="col-lg-6" key={item._id}>
+                  <CaseStudyCard
+                    data={{
+                      image: item.featuredImage,
+                      title: item.name,
+                      comments: item.industry,
+                      discription: item.briefIntro,
+                      slug: item.slug,
+                    }}
+                  />
+                </div>
+              ))}
+            </div>
           </div>
         </div>
-      </div>
+      )}
       <AboutCTA />
     </>
   );
