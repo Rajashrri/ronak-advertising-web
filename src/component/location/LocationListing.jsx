@@ -93,7 +93,7 @@ const LocationListing = () => {
 
                 {filteredLocations.length === 0 && (
                   <div className="col-12 text-center">
-                    <h3>No locations found.</h3>
+                    <h3>No data found.</h3>
                   </div>
                 )}
               </div>
