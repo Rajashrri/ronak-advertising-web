@@ -287,6 +287,8 @@ const Details = () => {
           ></div>
         </div>
       </div>
+      {relatedBlogs?.length > 0 && (
+
       <div className="p-70">
         <div className="custom-container">
           <Heading
@@ -306,6 +308,8 @@ const Details = () => {
           </div>
         </div>
       </div>
+
+      )}
     </>
   );
 };
