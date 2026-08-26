@@ -1884,7 +1884,7 @@ border: 3px solid var(--200, #CCC);
   color: var(--P2, #FA0000);
 }
 .timelineslidermail .swiper-slide-active.swiper-slide:first-child{
-  margin-left: 200px;
+  /* margin-left: 200px; */
 }
 .timeline-card p{
   color: var(--700, #2C2C2C);

@@ -68,7 +68,7 @@ export default function TimelineSlider() {
 
         <Swiper
           modules={[Navigation, Autoplay]}
-          centeredSlides={false}
+          centeredSlides={true}
           slidesPerView={2}
           spaceBetween={30}
           // initialSlide={2}

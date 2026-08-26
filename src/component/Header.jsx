@@ -1,4 +1,4 @@
-import logo from "../assets/imgs/logo.png";
+import logo from "../assets/imgs/logo.svg";
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { getLocationsApi, popupEnquiryApi } from "../utils/frontApi";
