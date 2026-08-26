@@ -23,7 +23,7 @@ const Achievements = () => {
                                 </svg>
                                 <h3> Years of Industry Experience</h3>
                             </div>
-                            <h2>32+</h2>
+                            <h2>33+</h2>
                             <figure>
                                 <img src={why1} alt="" />
                             </figure>
