@@ -11,10 +11,10 @@ const LocationList = () => {
   return (
     <div>
           <Breadcrumb
-  title="Location"
+  title="Locations"
   items={[
     { label: "Home", link: "/" },
-    { label: "Location" },
+    { label: "Locations" },
   ]}
   bgimg={locationimg}
 />
