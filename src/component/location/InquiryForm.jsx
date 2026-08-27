@@ -112,7 +112,7 @@ const validate = () => {
               <div className="row">
                 <div className="col-lg-6">
                   <div className="input-box">
-                    <label htmlFor="">Your Name</label>
+                    <label htmlFor="">Your Name <span>*</span></label>
                     <input
                       type="text"
                       name="fullName"
@@ -141,7 +141,7 @@ const validate = () => {
                    
                 <div className="col-lg-6">
                   <div className="input-box">
-                    <label htmlFor="">Your Number</label>
+                    <label htmlFor="">Your Number <span>*</span></label>
                     <input
                       type="text"
                       name="phone"
