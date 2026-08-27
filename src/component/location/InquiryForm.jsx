@@ -138,6 +138,21 @@ const validate = () => {
                     )}
                   </div>
                 </div>
+                   
+                <div className="col-lg-6">
+                  <div className="input-box">
+                    <label htmlFor="">Your Number</label>
+                    <input
+                      type="text"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                    />
+                    {errors.phone && (
+                      <div className="text-danger mt-1">{errors.phone}</div>
+                    )}
+                  </div>
+                </div>
                   <div className="col-lg-12">
                   <div className="input-box">
                     <label htmlFor="">Your Email</label>
@@ -183,6 +198,21 @@ const validate = () => {
                                 </option>
                                 <option value="Other">Other </option>
                               </select>
+                                 <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+            >
+              <path
+                d="M6 9L12 15L18 9"
+                stroke="#F5F5F5"
+                stroke-width="1.5"
+                stroke-linecap="square"
+                stroke-linejoin="round"
+              />
+            </svg>
 
                               {errors.mediaType && (
                                 <div className="text-danger">
@@ -232,21 +262,7 @@ const validate = () => {
                       </div>
                   {/* </div> */}
                 </div>
-                
-                <div className="col-lg-6">
-                  <div className="input-box">
-                    <label htmlFor="">Your Number</label>
-                    <input
-                      type="text"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                    />
-                    {errors.phone && (
-                      <div className="text-danger mt-1">{errors.phone}</div>
-                    )}
-                  </div>
-                </div>
+             
               
                 <div className="col-lg-12">
                   <div className="input-box">
