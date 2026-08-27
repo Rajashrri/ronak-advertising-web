@@ -373,11 +373,7 @@ const ContactInfo = () => {
                           </svg>
                         </div>
 
-                        {errors.fullName && (
-                          <small className="text-danger">
-                            {errors.fullName}
-                          </small>
-                        )}
+                        
                       </div>
                     </div>
 
