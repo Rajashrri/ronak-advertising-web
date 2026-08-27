@@ -183,7 +183,7 @@ const validate = () => {
                 </div>
                  <div className="col-lg-6">
                   <div className="input-box">
-                        <label htmlFor="">Media Type<span>*</span></label>
+                        <label htmlFor="">Media Type <span>*</span></label>
                        <div className="custom-select">
                               <select
                                 name="mediaType"
