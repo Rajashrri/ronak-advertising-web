@@ -39,10 +39,13 @@ const Details = () => {
     }
   }, [blog]);
 
-  if (loading) {
-    return <h2>Loading...</h2>;
-  }
-
+if (loading) {
+  return (
+    <div className="case-study-loader">
+      <div className="spinner"></div>
+    </div>
+  );
+}
   if (!blog) {
     return <h2>Blog not found</h2>;
   }
