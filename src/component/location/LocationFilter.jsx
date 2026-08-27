@@ -44,7 +44,7 @@ const getLocationCards = async () => {
 
     const res = await getLocationSitesApi(
       currentPage,
-      2,
+      10,
       selectedLocation,
       selectedMediaType
     );
