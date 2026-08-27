@@ -155,7 +155,7 @@ const validate = () => {
                 </div>
                   <div className="col-lg-6">
                   <div className="input-box">
-                    <label htmlFor="">Your Email</label>
+                    <label htmlFor="">Your Email <span>*</span></label>
                     <input
                       type="email"
                       name="email"
