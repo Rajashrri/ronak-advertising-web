@@ -45,9 +45,15 @@ export const getLocationDetailApi = (slug) => {
 export const getLocationFiltersApi = () => {
   return frontApi.get("/location-filters");
 };
-
-export const getLocationSitesApi = () => {
-  return frontApi.get("/location-sites");
+export const getLocationSitesApi = (
+  page = 1,
+  limit = 10,
+  locationId = "all",
+  mediaType = "all"
+) => {
+  return frontApi.get(
+    `/location-sites?page=${page}&limit=${limit}&locationId=${locationId}&mediaType=${mediaType}`
+  );
 };
 export const careerApi = (data) => {
   return frontApi.post(

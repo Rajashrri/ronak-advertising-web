@@ -4110,6 +4110,55 @@ align-self: stretch;
   align-items: center;
   justify-content: center;
 }
+
+
+
+.custom-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+
+.page-number,
+.page-arrow {
+  width: 48px;
+  height: 48px;
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  color: #222;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+
+.page-number:hover,
+.page-arrow:hover:not(:disabled) {
+  background: #ed2b12;
+  color: #fff;
+  border-color: #ed2b12;
+}
+
+.page-number.active {
+  background: #ed2b12;
+  color: #fff;
+  border-color: #ed2b12;
+}
+
+.page-arrow:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.page-arrow:not(:disabled) {
+  background: #ed2b12;
+  color: #fff;
+  border-color: #ed2b12;
+}
  .conpage .input .custom-select svg{
     position: absolute;
     top: 50%;

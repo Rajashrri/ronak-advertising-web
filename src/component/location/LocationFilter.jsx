@@ -5,7 +5,6 @@ import {
 } from "../../utils/frontApi";
 import LocationCard from "../reuse/cards/LocationCard";
 
-import locationImg from "../../assets/imgs/location/locationlist.png";
 
 // ==========================================
 // DUMMY LOCATION DATA
@@ -22,6 +21,8 @@ const LocationFilter = () => {
   const [selectedLocation, setSelectedLocation] = useState("all");
   const [selectedMediaType, setSelectedMediaType] = useState("all");
   const [locationCards, setLocationCards] = useState([]);
+  const [currentPage, setCurrentPage] = useState(1);
+const [totalPages, setTotalPages] = useState(1);
   // ==========================================
   // GET UNIQUE LOCATIONS
   // ==========================================
@@ -29,37 +30,36 @@ const LocationFilter = () => {
   // ==========================================
   // FILTER LOCATIONS
   // ==========================================
-  const filteredLocations = useMemo(() => {
-    return locationCards.filter((item) => {
-      const locationMatch =
-        selectedLocation === "all" || item.locationId?._id === selectedLocation;
 
-      const mediaTypeMatch =
-        selectedMediaType === "all" || item.mediaType === selectedMediaType;
+useEffect(() => {
+  setCurrentPage(1);
+}, [selectedLocation, selectedMediaType]);
+useEffect(() => {
+  getLocationCards();
+}, [currentPage, selectedLocation, selectedMediaType]);
 
-      return locationMatch && mediaTypeMatch;
-    });
-  }, [locationCards, selectedLocation, selectedMediaType]);
+const getLocationCards = async () => {
+  try {
+    setLoading(true);
 
-  useEffect(() => {
-    getFilters();
-    getLocationCards();
-  }, []);
-  const getLocationCards = async () => {
-    try {
-      setLoading(true);
+    const res = await getLocationSitesApi(
+      currentPage,
+      2,
+      selectedLocation,
+      selectedMediaType
+    );
 
-      const res = await getLocationSitesApi();
-
-      if (res.data.success) {
-        setLocationCards(res.data.data || []);
-      }
-    } catch (error) {
-      console.log(error);
-    } finally {
-      setLoading(false);
+    if (res.data.success) {
+      setLocationCards(res.data.data || []);
+      setTotalPages(res.data.pagination.totalPages);
     }
-  };
+  } catch (error) {
+    console.log(error);
+  } finally {
+    setLoading(false);
+  }
+};
+
   useEffect(() => {
     getFilters();
   }, []);
@@ -159,7 +159,7 @@ const LocationFilter = () => {
             </div>
           ) : (
             <>
-              {filteredLocations.map((item) => (
+              {locationCards.map((item) => (
                 <div
                   className="col-lg-6 col-md-6 col-12 mb-4"
                   key={item._id}
@@ -178,8 +178,38 @@ const LocationFilter = () => {
                   />
                 </div>
               ))}
+{totalPages > 1 && (
+  <div className="custom-pagination">
+    <button
+      className="page-arrow"
+      disabled={currentPage === 1}
+      onClick={() => setCurrentPage(currentPage - 1)}
+    >
+      &#10094;
+    </button>
 
-              {filteredLocations.length === 0 && (
+    {[...Array(totalPages)].map((_, index) => (
+      <button
+        key={index}
+        className={`page-number ${
+          currentPage === index + 1 ? "active" : ""
+        }`}
+        onClick={() => setCurrentPage(index + 1)}
+      >
+        {index + 1}
+      </button>
+    ))}
+
+    <button
+      className="page-arrow"
+      disabled={currentPage === totalPages}
+      onClick={() => setCurrentPage(currentPage + 1)}
+    >
+      &#10095;
+    </button>
+  </div>
+)}
+              {locationCards.length === 0 && (
                 <div className="col-12 text-center">
                   <h3>No data found.</h3>
                 </div>
