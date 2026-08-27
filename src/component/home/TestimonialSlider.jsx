@@ -8,6 +8,7 @@ import "swiper/css/pagination";
 import { getTestimonialsApi } from "../../utils/frontApi";
 
 import profile from "../../assets/imgs/profile.svg";
+import Heading from "../reuse/Heading";
 
 export default function TestimonialSlider() {
   const [testimonials, setTestimonials] = useState([]);
@@ -33,6 +34,12 @@ export default function TestimonialSlider() {
   return (
     <section className="testimonial-section p-70">
       <div className="custom-container" data-gsap>
+          <Heading
+          title="BRANDS THAT TRUST US TO TAKE </br> THEIR MESSAGE OUTDOORS"
+          subtitle="CLIENT TESTIMONIALS"
+          titleclass="text-black text-center"
+          className="text-center"
+        />
         <Swiper
           modules={[Pagination, Autoplay]}
           pagination={{
