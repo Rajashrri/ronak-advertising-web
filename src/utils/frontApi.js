@@ -42,6 +42,13 @@ export const getLocationBySlugApi = (slug) => {
 export const getLocationDetailApi = (slug) => {
   return frontApi.get(`/location-details/${slug}`);
 };
+export const getLocationFiltersApi = () => {
+  return frontApi.get("/location-filters");
+};
+
+export const getLocationSitesApi = () => {
+  return frontApi.get("/location-sites");
+};
 export const careerApi = (data) => {
   return frontApi.post(
     `/career`,

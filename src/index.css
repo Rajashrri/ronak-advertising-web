@@ -4097,8 +4097,19 @@ align-self: stretch;
     transform: rotate(360deg);
   }
 }
-
-
+.location-loader {
+  min-height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.location-page-loader {
+  width: 100%;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
  .conpage .input .custom-select svg{
     position: absolute;
     top: 50%;
