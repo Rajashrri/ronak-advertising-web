@@ -797,7 +797,7 @@ a {
 
 
 .testimonial-section .swiper-pagination{
-  bottom: 22px;
+  bottom: 22px !important;
 }
 .testimonial-section .swiper-slide {
   height: 100%;
