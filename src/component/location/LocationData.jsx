@@ -49,7 +49,7 @@ const LocationData = () => {
   // =========================
   if (loading) {
     return (
-      <div className="location-loader">
+      <div className="case-study-loader">
         <div className="spinner"></div>
       </div>
     );
