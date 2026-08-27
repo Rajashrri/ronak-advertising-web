@@ -16,6 +16,7 @@ const Casedata = ({ setCaseName }) => {
   const [caseStudy, setCaseStudy] = useState(null);
   const shareUrl = encodeURIComponent(window.location.href);
   const shareTitle = encodeURIComponent(caseStudy?.name || "Case Study");
+  const [loading, setLoading] = useState(true);
 
   const share = (type) => {
     let url = "";
@@ -83,13 +84,17 @@ const Casedata = ({ setCaseName }) => {
     fetchCaseStudy();
   }, [slug]);
 
-  const fetchCaseStudy = async () => {
+ const fetchCaseStudy = async () => {
     try {
+      setLoading(true);
+
       const res = await getCaseStudyDetailApi(slug);
 
       if (res.data.success) {
         setCaseStudy(res.data.data);
-        setRelatedCases(res.data.relatedCaseStudies || []);
+        setRelatedCases(
+          res.data.relatedCaseStudies || []
+        );
 
         if (setCaseName) {
           setCaseName(res.data.data.name);
@@ -97,10 +102,23 @@ const Casedata = ({ setCaseName }) => {
       }
     } catch (err) {
       console.log(err);
+    } finally {
+      setLoading(false);
     }
   };
 
-  if (!caseStudy) return <p>Loading...</p>;
+  // Loader
+  if (loading) {
+    return (
+      <div className="case-study-loader">
+        <div className="spinner"></div>
+      </div>
+    );
+  }
+
+  if (!caseStudy) {
+    return null;
+  }
 
   return (
     <>

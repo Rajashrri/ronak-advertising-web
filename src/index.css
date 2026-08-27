@@ -4076,7 +4076,27 @@ align-self: stretch;
   width: 300px;
 }
 
+.case-study-loader {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
+.case-study-loader .spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid #e5e5e5;
+  border-top: 5px solid #000;
+  border-radius: 50%;
+  animation: caseStudySpin 0.8s linear infinite;
+}
+
+@keyframes caseStudySpin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 
  .conpage .input .custom-select svg{

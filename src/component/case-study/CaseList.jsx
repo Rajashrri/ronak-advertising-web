@@ -4,6 +4,7 @@ import CaseStudyCard from "../reuse/CaseStudyCard";
 import { Helmet } from "react-helmet-async";
 const CaseList = () => {
   const [caseStudies, setCaseStudies] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetchCaseStudies();
@@ -11,13 +12,16 @@ const CaseList = () => {
 
   const fetchCaseStudies = async () => {
     try {
+       setLoading(true);
       const res = await getCaseStudiesApi();
 
       if (res.data.success) {
         setCaseStudies(res.data.data);
       }
-    } catch (err) {
+        } catch (err) {
       console.log(err);
+    } finally {
+      setLoading(false);
     }
   };
   return (
@@ -39,6 +43,13 @@ const CaseList = () => {
       </Helmet>
       <div className="p-70">
         <div className="custom-container">
+       {loading ? (
+            // Loader
+            <div className="case-study-loader">
+              <div className="spinner"></div>
+            </div>
+          ) : (
+
           <div className="row mt-4 casestudylistrow ">
             {caseStudies.map((item) => (
               <div className="col-lg-6" key={item._id} data-gsap>
@@ -57,6 +68,8 @@ const CaseList = () => {
               </div>
             ))}
           </div>
+
+           )}
         </div>
       </div>
     </>

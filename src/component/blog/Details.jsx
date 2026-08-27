@@ -16,21 +16,22 @@ const Details = () => {
     getBlog();
   }, [slug]);
 
-  const getBlog = async () => {
-    try {
-      const res = await getBlogDetailsApi(slug);
+ const getBlog = async () => {
+  try {
+    setLoading(true);
 
-      if (res.data.success) {
-        setBlog(res.data.data);
-        setRelatedBlogs(res.data.relatedBlogs);
-      }
-    } catch (err) {
-      console.log(err);
-    } finally {
-      setLoading(false);
+    const res = await getBlogDetailsApi(slug);
+
+    if (res.data.success) {
+      setBlog(res.data.data);
+      setRelatedBlogs(res.data.relatedBlogs);
     }
-  };
-
+  } catch (err) {
+    console.log(err);
+  } finally {
+    setLoading(false);
+  }
+};
   useEffect(() => {
     if (blog) {
       const pageTitle = blog.metaTitle?.trim() || blog.title;
@@ -39,10 +40,13 @@ const Details = () => {
     }
   }, [blog]);
 
-  if (loading) {
-    return <h2>Loading...</h2>;
-  }
-
+if (loading) {
+  return (
+    <div className="case-study-loader">
+      <div className="spinner"></div>
+    </div>
+  );
+}
   if (!blog) {
     return <h2>Blog not found</h2>;
   }

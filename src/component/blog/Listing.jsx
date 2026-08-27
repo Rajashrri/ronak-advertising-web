@@ -3,7 +3,7 @@ import BlogCard from "../reuse/BlogCard";
 import { getBlogsApi } from "../../utils/frontApi";
 import { useSearchParams } from "react-router-dom";
 const Listing = () => {
-    useEffect(() => {
+  useEffect(() => {
     document.title = "Blogs | Ronak Advertising";
   }, []);
 
@@ -48,7 +48,9 @@ const Listing = () => {
       <div className="custom-container blogcontainer">
         <div className="row">
           {loading ? (
-            <div className="text-center py-5">Loading...</div>
+            <div className="case-study-loader">
+              <div className="spinner"></div>
+            </div>
           ) : currentBlogs.length > 0 ? (
             currentBlogs.map((item) => (
               <div className="col-lg-4 mb-4" key={item._id}>
