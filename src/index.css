@@ -4342,6 +4342,9 @@ align-self: stretch;
   .input-box .custom-select{
     position: relative;
   }
+  .input-box span{
+    color: #d40000;
+  }
   .input-box .custom-select select{
     width: 100%;
       border-radius: 16px;
