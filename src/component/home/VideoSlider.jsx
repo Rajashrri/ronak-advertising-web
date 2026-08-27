@@ -188,7 +188,7 @@ export default function VideoSlider() {
   };
 
   return (
-    <section className="testimonial-section p-70">
+    <section className="testimonial-section1 p-70">
       <div className="custom-container" data-gsap>
 
         <Heading
