@@ -11,6 +11,7 @@
   import Home from "./pages/Home";
   import About from "./pages/About";
   import Location from "./pages/Location";
+  import LocationList from "./pages/LocationList";
   import Team from "./pages/Team";
   import LocationDetails from "./pages/LocationDetails";
   import BlogList from "./pages/BlogList";
@@ -58,6 +59,7 @@
             <Route path="/" element={<Layout />}>
               <Route index element={<Home />} />
               <Route path="/about" element={<About />} />
+              <Route path="/location" element={<LocationList />} />
               <Route path="/location/:slug" element={<Location />} />
               <Route
                 path="/location-details/:slug"
