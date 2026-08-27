@@ -1678,9 +1678,13 @@ text-transform: none;
 }
 
 .bread-list {
-  padding: 140px 0 140px 285px;
+  /* padding: 140px 0 140px 285px; */
+      max-width: 1290px;
+    margin: auto;
+    padding: 140px 16px;
   position: relative;
   z-index: 11;
+  width: 100%;
 }
 
 .bread-list h2 {
