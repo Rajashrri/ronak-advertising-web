@@ -1,9 +1,9 @@
 import React from 'react'
 import Heading from '../reuse/Heading'
-import why1 from "../../assets/imgs/about/why1.png"
-import why2 from "../../assets/imgs/about/why2.png"
-import why3 from "../../assets/imgs/about/why3.png"
-import why4 from "../../assets/imgs/about/why4.png"
+import why1 from "../../assets/imgs/about/why11.webp"
+import why2 from "../../assets/imgs/about/why12.webp"
+import why3 from "../../assets/imgs/about/why13.webp"
+import why4 from "../../assets/imgs/about/why14.webp"
 
 const WhyChooseUs = () => {
   return (

@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import Breadcrumb from '../component/reuse/BreadCrumb'
-import contact from "../assets/imgs/breadcrumb/contact.jpg"
+import contact from "../assets/imgs/breadcrumb/contact.webp"
 import ContactInfo from '../component/contact/ContactInfo'
 
 const Contact = () => {
