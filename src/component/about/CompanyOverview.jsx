@@ -1,7 +1,7 @@
 import React from 'react'
 import Heading from '../reuse/Heading'
-import img1 from "./../../assets/imgs/about/ab1.png"
-import img2 from "./../../assets/imgs/about/ab2.png"
+import img1 from "./../../assets/imgs/about/ab1.webp"
+import img2 from "./../../assets/imgs/about/ab2.webp"
 
 const CompanyOverview = () => {
   return (

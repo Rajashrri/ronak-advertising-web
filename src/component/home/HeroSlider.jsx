@@ -9,6 +9,8 @@ import {
 import img1 from "../../assets/imgs/slider1.webp";
 import img2 from "../../assets/imgs/slider2.webp";
 import img3 from "../../assets/imgs/slider3.webp";
+import img4 from "../../assets/imgs/slider4.webp";
+import img5 from "../../assets/imgs/slider5.webp";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -32,6 +34,18 @@ const slides = [
   {
     id: 3,
     image: img3,
+    title: "Digital Experience",
+    subtitle: "Let's Create Together",
+  },
+  {
+    id: 4,
+    image: img4,
+    title: "Digital Experience",
+    subtitle: "Let's Create Together",
+  },
+  {
+    id: 5,
+    image: img5,
     title: "Digital Experience",
     subtitle: "Let's Create Together",
   },
