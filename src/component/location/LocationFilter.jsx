@@ -167,8 +167,9 @@ const LocationFilter = () => {
                 >
                   <LocationCard
                     item={{
-                      title: item.siteName,
+                      siteName: item.siteName,
                       location: item.locationId?.locationName,
+                      media: item.media,
                       mediaType: item.mediaType,
                       siteCode: item.siteCode,
                       image: item.image,
