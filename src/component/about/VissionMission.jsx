@@ -14,7 +14,7 @@ const VissionMission = () => {
                             <path d="M17.9988 22.5001C20.4841 22.5001 22.4988 20.4853 22.4988 18.0001C22.4988 15.5148 20.4841 13.5001 17.9988 13.5001C15.5135 13.5001 13.4988 15.5148 13.4988 18.0001C13.4988 20.4853 15.5135 22.5001 17.9988 22.5001Z" stroke="#2C2C2C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                         <h2>Our Vision</h2>
-                        <p>To redefine outdoor advertising by combining strategic locations, media expertise and innovative thinking that helps brands achieve meaningful visibility.</p>
+                        <p>To be the most trusted and innovative Out-of-Home Media company in India, transforming spaces into powerful platforms that add lasting value to businesses, brands and communities.</p>
                     </div>
                 </div>
                 <div className="col-lg-7">
@@ -35,7 +35,7 @@ const VissionMission = () => {
                         <path d="M18 21C19.6569 21 21 19.6569 21 18C21 16.3431 19.6569 15 18 15C16.3431 15 15 16.3431 15 18C15 19.6569 16.3431 21 18 21Z" stroke="#2C2C2C" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
                         </svg>
                         <h2>Our Mission</h2>
-                        <p>To deliver reliable, measurable and high-impact advertising opportunities that create lasting impressions and business growth for our clients.</p>
+                        <p>To help businesses grow through high-impact, strategically located and innovative outdoor media solutions that connect brands with millions of people every day.</p>
                     </div>
                 </div>
              

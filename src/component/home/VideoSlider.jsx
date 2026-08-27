@@ -6,6 +6,11 @@ import "swiper/css";
 import "swiper/css/pagination";
 
 import videocard from "../../assets/imgs/testimonial.mp4";
+import videocard1 from "../../assets/imgs/testimonial1.mp4";
+import videocard2 from "../../assets/imgs/testimonial2.mp4";
+import videocard3 from "../../assets/imgs/testimonial3.mp4";
+import videocard4 from "../../assets/imgs/testimonial4.mp4";
+
 import Heading from "../reuse/Heading";
 
 // ==========================================
@@ -63,6 +68,7 @@ const PauseIcon = () => {
 // ==========================================
 const VideoSlide = ({
   index,
+  video,
   videoRefs,
   playingIndex,
   handlePlayPause,
@@ -78,7 +84,7 @@ const VideoSlide = ({
         ref={(el) => {
           videoRefs.current[index] = el;
         }}
-        src={videocard}
+        src={video}
         playsInline
         preload="metadata"
         onPlay={() => handleVideoPlay(index)}
@@ -106,6 +112,17 @@ export default function VideoSlider() {
   const videoRefs = useRef([]);
 
   const [playingIndex, setPlayingIndex] = useState(null);
+
+  // ==========================================
+  // VIDEO LIST
+  // ==========================================
+  const videos = [
+    videocard,
+    videocard1,
+    videocard2,
+    videocard3,
+    videocard4,
+  ];
 
   // ==========================================
   // PLAY / PAUSE
@@ -151,19 +168,19 @@ export default function VideoSlider() {
   const handleVideoPause = () => {
     setPlayingIndex(null);
 
-    // Resume Swiper autoplay
+    // Start Swiper autoplay
     if (swiperRef.current?.autoplay) {
       swiperRef.current.autoplay.start();
     }
   };
 
   // ==========================================
-  // VIDEO END
+  // VIDEO ENDED
   // ==========================================
   const handleVideoEnded = () => {
     setPlayingIndex(null);
 
-    // Resume Swiper autoplay
+    // Start Swiper autoplay
     if (swiperRef.current?.autoplay) {
       swiperRef.current.autoplay.start();
     }
@@ -181,15 +198,15 @@ export default function VideoSlider() {
     });
 
     setPlayingIndex(null);
-
-    // IMPORTANT:
-    // Don't call swiper.autoplay.start() here.
-    // Swiper handles autoplay itself.
   };
 
   return (
     <section className="testimonial-section1 p-70">
       <div className="custom-container" data-gsap>
+
+        {/* ==========================================
+            HEADING
+        ========================================== */}
 
         <Heading
           title="WHAT OUR CLIENTS HAVE TO SAY <br/> ABOUT THE IMPACT WE CREATE"
@@ -197,6 +214,10 @@ export default function VideoSlider() {
           titleclass="text-black text-center"
           className="text-center"
         />
+
+        {/* ==========================================
+            SWIPER
+        ========================================== */}
 
         <Swiper
           modules={[Pagination, Autoplay]}
@@ -210,19 +231,20 @@ export default function VideoSlider() {
           loop={true}
           speed={800}
           className="videoslidermain"
-
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
           }}
-
           onSlideChange={handleSlideChange}
         >
 
-          {/* ================= SLIDE 1 ================= */}
+          {/* ==========================================
+              VIDEO 1
+          ========================================== */}
 
           <SwiperSlide>
             <VideoSlide
               index={0}
+              video={videocard}
               videoRefs={videoRefs}
               playingIndex={playingIndex}
               handlePlayPause={handlePlayPause}
@@ -232,11 +254,65 @@ export default function VideoSlider() {
             />
           </SwiperSlide>
 
-          {/* ================= SLIDE 2 ================= */}
+          {/* ==========================================
+              VIDEO 2
+          ========================================== */}
 
           <SwiperSlide>
             <VideoSlide
               index={1}
+              video={videocard1}
+              videoRefs={videoRefs}
+              playingIndex={playingIndex}
+              handlePlayPause={handlePlayPause}
+              handleVideoPlay={handleVideoPlay}
+              handleVideoPause={handleVideoPause}
+              handleVideoEnded={handleVideoEnded}
+            />
+          </SwiperSlide>
+
+          {/* ==========================================
+              VIDEO 3
+          ========================================== */}
+
+          <SwiperSlide>
+            <VideoSlide
+              index={2}
+              video={videocard2}
+              videoRefs={videoRefs}
+              playingIndex={playingIndex}
+              handlePlayPause={handlePlayPause}
+              handleVideoPlay={handleVideoPlay}
+              handleVideoPause={handleVideoPause}
+              handleVideoEnded={handleVideoEnded}
+            />
+          </SwiperSlide>
+
+          {/* ==========================================
+              VIDEO 4
+          ========================================== */}
+
+          <SwiperSlide>
+            <VideoSlide
+              index={3}
+              video={videocard3}
+              videoRefs={videoRefs}
+              playingIndex={playingIndex}
+              handlePlayPause={handlePlayPause}
+              handleVideoPlay={handleVideoPlay}
+              handleVideoPause={handleVideoPause}
+              handleVideoEnded={handleVideoEnded}
+            />
+          </SwiperSlide>
+
+          {/* ==========================================
+              VIDEO 5
+          ========================================== */}
+
+          <SwiperSlide>
+            <VideoSlide
+              index={4}
+              video={videocard4}
               videoRefs={videoRefs}
               playingIndex={playingIndex}
               handlePlayPause={handlePlayPause}

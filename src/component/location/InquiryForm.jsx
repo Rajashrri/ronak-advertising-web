@@ -126,6 +126,21 @@ const validate = () => {
                 </div>
                 <div className="col-lg-6">
                   <div className="input-box">
+                    <label htmlFor="">Company Name <span>*</span></label>
+                    <input
+                      type="text"
+                      name="Company Name"
+                      value={formData.fullName}
+                      onChange={handleChange}
+                    />
+                    {errors.fullName && (
+                      <div className="text-danger mt-1">{errors.fullName}</div>
+                    )}
+                  </div>
+                </div>
+                   
+                <div className="col-lg-6">
+                  <div className="input-box">
                     <label htmlFor="">Your Number</label>
                     <input
                       type="text"
@@ -138,7 +153,7 @@ const validate = () => {
                     )}
                   </div>
                 </div>
-                <div className="col-lg-12">
+                  <div className="col-lg-6">
                   <div className="input-box">
                     <label htmlFor="">Your Email</label>
                     <input
@@ -152,6 +167,70 @@ const validate = () => {
                     )}
                   </div>
                 </div>
+                  <div className="col-lg-6">
+                  <div className="input-box">
+                    <label htmlFor="">City / Preferred Location <span>*</span></label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                    />
+                    {errors.email && (
+                      <div className="text-danger mt-1">{errors.email}</div>
+                    )}
+                  </div>
+                </div>
+                 <div className="col-lg-6">
+                  <div className="input-box">
+                        <label htmlFor="">Media Type<span>*</span></label>
+                       <div className="custom-select">
+                              <select
+                                name="mediaType"
+                                value={formData.mediaType}
+                                onChange={handleChange}
+                              >
+                                <option value="Select *">Media Type *</option>
+                                <option value="Hoarding">Hoarding </option>
+                                <option value="LED">LED </option>
+                                <option value="BQS">BQS </option>
+                                <option value="Transit Media">
+                                  Transit Media{" "}
+                                </option>
+                                <option value="Other">Other </option>
+                              </select>
+                                 <svg
+                                    xmlns="http://www.w3.org/2000/svg"
+                                    width="24"
+                                    height="24"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                  >
+                                    <path
+                                      d="M6 9L12 15L18 9"
+                                      stroke="#F5F5F5"
+                                      stroke-width="1.5"
+                                      stroke-linecap="square"
+                                      stroke-linejoin="round"
+                                    />
+                                  </svg>
+
+                              {errors.mediaType && (
+                                <div className="text-danger">
+                                  {errors.mediaType}
+                                </div>
+                              )}
+                          
+                            </div>
+
+                        {errors.fullName && (
+                          <small className="text-danger">{errors.fullName}</small>
+                        )}
+                      </div>
+                  {/* </div> */}
+                </div>
+             
+              
                 <div className="col-lg-12">
                   <div className="input-box">
                     <label htmlFor="">Message</label>
