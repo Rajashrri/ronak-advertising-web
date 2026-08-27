@@ -3762,9 +3762,13 @@ text-transform: capitalize;
   width: 100%;
   object-fit: cover;
 }
+.videoslidermain .vode0-card video{
+  border: 1px solid #DD2B1C;
+  border-radius: 20px;
+  width: auto;
+}
 .videoslidermain .vode0-card{
   border-radius: 20px;
-border: 1px solid #DD2B1C;
 overflow: hidden;
 height: 600px;
 }
