@@ -107,11 +107,11 @@ export default function HeroSlider() {
       <Swiper
         modules={[Navigation, Autoplay, EffectCreative]}
         loop={true}
-        speed={1200}
-        autoplay={{
-          delay: 4000,
-          disableOnInteraction: false,
-        }}
+        // speed={1200}
+        // autoplay={{
+        //   delay: 4000,
+        //   disableOnInteraction: false,
+        // }}
         effect="creative"
         creativeEffect={{
           prev: {

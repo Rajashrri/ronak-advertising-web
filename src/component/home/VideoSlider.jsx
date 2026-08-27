@@ -210,7 +210,7 @@ export default function VideoSlider() {
 
         <Heading
           title="WHAT OUR CLIENTS HAVE TO SAY <br/> ABOUT THE IMPACT WE CREATE"
-          subtitle="Video Testimonial"
+          subtitle="Video Testimonial's"
           titleclass="text-black text-center"
           className="text-center"
         />

@@ -36,7 +36,7 @@ export default function TestimonialSlider() {
       <div className="custom-container" data-gsap>
           <Heading
           title="BRANDS THAT TRUST US TO TAKE </br> THEIR MESSAGE OUTDOORS"
-          subtitle="CLIENT TESTIMONIALS"
+          subtitle="Client Stories"
           titleclass="text-black text-center"
           className="text-center"
         />
