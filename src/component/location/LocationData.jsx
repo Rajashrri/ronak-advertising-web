@@ -21,20 +21,43 @@ const LocationData = () => {
 
   const [location, setLocation] = useState(null);
   const [relatedLocations, setRelatedLocations] = useState([]);
+    const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     fetchDetail();
   }, [slug]);
 
-  const fetchDetail = async () => {
-    const res = await getLocationDetailApi(slug);
+ const fetchDetail = async () => {
+    try {
+      setLoading(true);
 
-    if (res.data.success) {
-      setLocation(res.data.data);
-      setRelatedLocations(res.data.relatedLocations);
+      const res = await getLocationDetailApi(slug);
+
+      if (res.data.success) {
+        setLocation(res.data.data);
+        setRelatedLocations(res.data.relatedLocations || []);
+      }
+    } catch (error) {
+      console.error("Failed to fetch location detail:", error);
+    } finally {
+      setLoading(false);
     }
   };
 
-  if (!location) return null;
+  // =========================
+  // Loader
+  // =========================
+  if (loading) {
+    return (
+      <div className="location-loader">
+        <div className="spinner"></div>
+      </div>
+    );
+  }
+
+  if (!location) {
+    return null;
+  }
 
   return (
     <>
