@@ -63,7 +63,7 @@ const Hero = () => {
       <div className="herocontainer">
         <div className="herohead">
           <h1>
-           THE PIONEERS OF OUTDOOR IN NAVI MUMBAI<br />
+           THE PIONEERS OF OUTDOOR IN NAVI MUMBAI.<br />
             <span>THE STANDARD</span> FOR IMPACT.
           </h1>
         </div>
