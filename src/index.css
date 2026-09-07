@@ -3851,11 +3851,12 @@ height: 100%;
   border-radius: 8px;
   margin-bottom: 0;
   height: 100%;
-  min-height: 	379px;
+  min-height: 	279px;
 }
 .menuimg figure img{
   height: 100%;
   width: 100%;
+  border-radius: 16px;
   object-fit: cover;
 }
 /* *************************************************** */
