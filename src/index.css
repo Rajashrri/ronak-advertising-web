@@ -3845,6 +3845,7 @@ color: var(--White, #FFF);
   padding: 10px;
   border-radius: 8px;
 border: 1px solid var(--800, #898989);
+height: 100%;
 }
 .menuimg figure{
   border-radius: 8px;
@@ -3853,6 +3854,7 @@ border: 1px solid var(--800, #898989);
 .menuimg figure img{
   height: 100%;
   width: 100%;
+  object-fit: cover;
 }
 /* *************************************************** */
 
