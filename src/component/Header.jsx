@@ -11,6 +11,7 @@ const Header = () => {
   const [locations, setLocations] = useState([]);
   const [showPopup, setShowPopup] = useState(false);
   const [showMenu, setShowMenu] = useState(true);
+  const [hoveredImage, setHoveredImage] = useState(menu);
 
   const navigate = useNavigate();
 
@@ -260,7 +261,12 @@ const Header = () => {
 
                              {locations.map((item) => {
                             return (
-                              <a key={item._id} href={`/location/${item.slug}`}>
+                              <a  
+                                className="location-img"
+                                key={item._id}
+                                onMouseEnter={() => setHoveredImage(item.image)}
+                                onMouseLeave={() => setHoveredImage(menu)} 
+                                href={`/location/${item.slug}`}>
                                 {item.locationName}
                               </a>
                             );
@@ -270,7 +276,7 @@ const Header = () => {
                       <div className="col-lg-4">
                         <div className="menuimg">
                           <figure>
-                            <img src={menu} alt="" />
+                            <img src={hoveredImage} alt="" />
                           </figure>
 
                         </div>
