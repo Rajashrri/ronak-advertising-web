@@ -276,7 +276,7 @@ const Header = () => {
                       <div className="col-lg-4">
                         <div className="menuimg">
                           <figure>
-                            <img src={hoveredImage} alt="" />
+                            <img src={hoveredImage || menu} alt="" />
                           </figure>
 
                         </div>
