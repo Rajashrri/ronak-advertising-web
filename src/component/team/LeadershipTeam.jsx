@@ -42,7 +42,10 @@ const LeadershipTeam = () => {
           <div className="team-grid">
             {team.map((member) => (
               <div className="team-card" key={member._id}>
+                <div className="imgcard">
                 <img src={member.image} alt={member.name} />
+                     <div className="shape"></div>
+                </div>
 
                 {member.linkedin && member.linkedin !== "#" && (
                   <a
@@ -80,7 +83,7 @@ const LeadershipTeam = () => {
                   </div>
                 </div>
 
-                <div className="shape"></div>
+           
               </div>
             ))}
           </div>
