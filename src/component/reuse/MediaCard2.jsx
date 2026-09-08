@@ -23,6 +23,10 @@ const MediaCard2 = ({ data }) => {
           <figure className="mediaimg1">
             <img src={data.image} alt={data.title || "Media"} />
           </figure>
+          <div>
+            <span>Click to View</span>
+
+          </div>
         </div>
       </button>
 
@@ -44,8 +48,8 @@ const MediaCard2 = ({ data }) => {
               aria-label="Close"
             >
              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="38" viewBox="0 0 24 38" fill="none">
-  <path d="M18 9.38287L6 28.1486M6 9.38287L18 28.1486" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
+              <path d="M18 9.38287L6 28.1486M6 9.38287L18 28.1486" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
             </button>
 
             {/* Image */}

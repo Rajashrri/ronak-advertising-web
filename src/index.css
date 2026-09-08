@@ -4552,6 +4552,32 @@ text-transform: capitalize;
   width: 100%;
   object-fit: cover;
 }
+.blogwrap {
+  position: relative;
+}
+.blogwrap div span{
+  color: var(--900, #1A1A1A);
+
+/* Button */
+padding: 20px 30px;
+font-family: var(--Ubuntu);
+border-radius: 999px;
+background: #FFF;
+font-size: 18px;
+font-style: normal;
+font-weight: 700;
+line-height: 22px; /* 122.222% */
+text-transform: capitalize;
+}
+.blogwrap div{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  display: block;
+  position: absolute;
+}
 
 /* Animation */
 @keyframes modalFadeIn {
