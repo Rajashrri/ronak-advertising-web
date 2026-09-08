@@ -4544,6 +4544,11 @@ text-transform: capitalize;
 .image-modal-close:hover {
   background: transparent;
 }
+.imgpop img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
 
 /* Animation */
 @keyframes modalFadeIn {

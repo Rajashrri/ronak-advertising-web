@@ -49,7 +49,7 @@ const MediaCard2 = ({ data }) => {
             </button>
 
             {/* Image */}
-            <div>
+            <div className="imgpop">
 
             <img
               src={data.image}
