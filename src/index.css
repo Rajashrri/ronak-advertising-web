@@ -2877,7 +2877,8 @@ box-shadow: 0 33px 9px 0 rgba(0, 0, 0, 0.00), 0 21px 9px 0 rgba(0, 0, 0, 0.01), 
 .core-card {
   position: relative;
   /* overflow:hidden; */
-  border-radius: 4px;
+border-radius: 20px;
+  background-color: #fff;
 }
 
 .core-card img {
@@ -2929,36 +2930,31 @@ box-shadow: 0 33px 9px 0 rgba(0, 0, 0, 0.00), 0 21px 9px 0 rgba(0, 0, 0, 0.01), 
 }
 
 .core-content h3 {
-  color: var(--900, #1A1A1A);
-  font-feature-settings: 'liga' off, 'clig' off;
+color: var(--P2, #FA0000);
+font-feature-settings: 'liga' off, 'clig' off;
 
-  /* Heading/H2 */
-  font-family: var(--bebas-neue);
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 45px;
-  /* 112.5% */
-  letter-spacing: -0.76px;
-  text-transform: capitalize;
-  position: relative;
-  z-index: 11;
+/* Heading/H2 */
+font-family:var(--bebas-neue);
+font-size: 40px;
+font-style: normal;
+font-weight: 400;
+line-height: 45px; /* 112.5% */
+letter-spacing: -0.76px;
+text-transform: capitalize;
+margin-bottom: 0;
 }
 
 .core-content p {
-  color: var(--800, #898989);
-  font-feature-settings: 'liga' off, 'clig' off;
-  font-family: var(--bebas-neue);
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 30px;
-  /* 150% */
-  letter-spacing: -0.6px;
-  text-transform: capitalize;
-  margin: 0;
-  position: relative;
-  z-index: 11;
+color: var(--700, #2C2C2C);
+font-feature-settings: 'liga' off, 'clig' off;
+font-family: var(--bebas-neue);
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+line-height: 30px; /* 125% */
+letter-spacing: -0.6px;
+text-transform: capitalize;
+margin-bottom: 0;
 }
 
 .teanhead p {
