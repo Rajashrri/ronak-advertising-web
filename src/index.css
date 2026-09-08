@@ -3631,6 +3631,7 @@ text-transform: capitalize;
   justify-content: center;
   align-items: center;
   overflow: hidden;
+  height: 100%;
 }
 .blogcard2 img{
   border-radius: 0px;
