@@ -961,7 +961,9 @@ a {
   width: 100%;
 }
 
-.blogwrap {}
+.blogwrap {
+  width: 484px;
+}
 
 .blogcontent1 {
   padding: 47px 40px 30px;
