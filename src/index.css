@@ -4569,6 +4569,9 @@ text-transform: capitalize;
   .image-modal {
     padding: 15px;
   }
+  .imgpop {
+  height: 100%;
+}
 
   .popup-image {
     max-width: 95vw;
