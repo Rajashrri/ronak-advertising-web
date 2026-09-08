@@ -2870,7 +2870,7 @@ box-shadow: 0 33px 9px 0 rgba(0, 0, 0, 0.00), 0 21px 9px 0 rgba(0, 0, 0, 0.01), 
 .core-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 21px;
+  gap: 24px;
   margin-top: 61px;
 }
 
