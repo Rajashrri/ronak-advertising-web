@@ -48,7 +48,7 @@ const CoreTeam = () => {
               <div className="core-card" key={item._id}>
 
                 <div className="imgcard">
-                <img src={member.image} alt={member.name} />
+                <img src={item.image} alt={item.name} />
                      <div className="shape"></div>
                 </div>
 
