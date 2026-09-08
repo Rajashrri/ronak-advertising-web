@@ -4476,7 +4476,7 @@ align-self: stretch;
 .image-modal-content {
   position: relative;
 
-  max-width: 90vw;
+  max-width: 1000px;
   max-height: 90vh;
 
   display: flex;
@@ -4526,7 +4526,7 @@ text-transform: capitalize;
   border: none;
   border-radius: 50%;
 
-  background: white;
+  background: transparent;
   color: #000;
 
   font-size: 28px;
@@ -4542,7 +4542,7 @@ text-transform: capitalize;
 }
 
 .image-modal-close:hover {
-  background: #eee;
+  background: transparent;
 }
 
 /* Animation */
