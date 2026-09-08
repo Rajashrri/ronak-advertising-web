@@ -2756,6 +2756,7 @@ box-shadow: 0 33px 9px 0 rgba(0, 0, 0, 0.00), 0 21px 9px 0 rgba(0, 0, 0, 0.01), 
   align-items: flex-end;
   gap: 18px;
   z-index: 11;
+  background-color: #fff;
 }
 
 .shape {
