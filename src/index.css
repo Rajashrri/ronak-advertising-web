@@ -2886,15 +2886,15 @@ box-shadow: 0 33px 9px 0 rgba(0, 0, 0, 0.00), 0 21px 9px 0 rgba(0, 0, 0, 0.01), 
 }
 
 .core-card .core-info {
-  position: absolute;
+  position: relative;
   left: 0;
   right: 0;
-  bottom: -70px;
+  /* bottom: -70px; */
   display: flex;
   align-items: flex-end;
   /* display: flex;
     align-items: center; */
-  height: 300px;
+  /* height: 300px; */
 }
 
 .triangle {
