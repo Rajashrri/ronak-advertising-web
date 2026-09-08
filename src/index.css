@@ -2719,7 +2719,7 @@ box-shadow: 0 33px 9px 0 rgba(0, 0, 0, 0.00), 0 21px 9px 0 rgba(0, 0, 0, 0.01), 
   position: relative;
   overflow: hidden;
   border-radius: 18px;
-  background-color: #D9D9D9;
+  background-color: #fff;
 }
 .imgcard{
   position: relative;
