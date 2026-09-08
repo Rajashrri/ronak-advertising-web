@@ -49,11 +49,14 @@ const MediaCard2 = ({ data }) => {
             </button>
 
             {/* Image */}
+            <div>
+
             <img
               src={data.image}
               alt={data.title || "Media"}
               className="popup-image"
-            />
+              />
+              </div>
             <p>Located on busy Main Street near the Central Library and Innovation Park, our advertising agency's hoarding spot offers excellent traffic visibility. This strategic location attracts tech enthusiasts, entrepreneurs, and creatives, ensuring your message reaches a diverse and engaged audience. Surrounded by vibrant landmarks and easy to access, </p>
           </div>
         </div>
