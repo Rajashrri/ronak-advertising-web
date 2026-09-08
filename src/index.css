@@ -2719,10 +2719,12 @@ box-shadow: 0 33px 9px 0 rgba(0, 0, 0, 0.00), 0 21px 9px 0 rgba(0, 0, 0, 0.01), 
   position: relative;
   overflow: hidden;
   border-radius: 18px;
+  background-color: #D9D9D9;
 }
 .imgcard{
   position: relative;
   overflow: hidden;
+  border-radius: 0 0 16px 16px;
 }
 
 .team-card img {
