@@ -4575,7 +4575,9 @@ text-transform: capitalize;
   display: flex;
   justify-content: center;
   align-items: center;
-  display: block;
+  /* display: block; */
+  top: 0;
+  left: 0;
   position: absolute;
 }
 
