@@ -47,15 +47,15 @@ const CoreTeam = () => {
             {team.map((item) => (
               <div className="core-card" key={item._id}>
 
-                <img
-                  src={item.image}
-                  alt={item.name}
-                />
+                <div className="imgcard">
+                <img src={member.image} alt={member.name} />
+                     <div className="shape"></div>
+                </div>
 
                 <div className="core-info">
                   <div className="core-content">
 
-                    <div className="triangle"></div>
+                    {/* <div className="triangle"></div> */}
 
                     <h3>{item.name}</h3>
 
