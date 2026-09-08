@@ -4483,6 +4483,19 @@ align-self: stretch;
   align-items: center;
   justify-content: center;
 }
+.image-modal-content p{
+  color: var(--White, #FFF);
+font-feature-settings: 'liga' off, 'clig' off;
+margin-top: 24px;
+
+/* Body/M */
+font-family: var(--Ubuntu);
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 27px; /* 150% */
+text-transform: capitalize;
+}
 
 /* Popup Image */
 .popup-image {
