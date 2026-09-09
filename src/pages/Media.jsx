@@ -20,7 +20,7 @@ const Media = () => {
   ]}
   bgimg={media}
 />
-{/* <FeaturedMediaHighlights/> */}
+<FeaturedMediaHighlights/>
 <MediaCoverage/>
 <ArticlesPublished/>
 <AboutCTA/>

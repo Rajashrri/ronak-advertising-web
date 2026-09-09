@@ -25,16 +25,16 @@ const MediaCoverage = () => {
   return (
     <div className="p-70 media ">
       <div className="custom-container ">
-        {/* <Heading
+        <Heading
           title="Media Coverage"
           // subtitle="Socials"
           titleclass="text-black"
-        /> */}
+        />
 
         <div className="row mt-4">
           {media.map((item, index) => {
             return (
-              <div className="col-lg-6 col-md-6" data-gsap key={index}>
+              <div className="col-lg-4 col-md-6" data-gsap key={index}>
                 <MediaCard2
                   data={{
                     image: item.image,
