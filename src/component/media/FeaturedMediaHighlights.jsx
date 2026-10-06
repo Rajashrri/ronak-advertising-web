@@ -49,6 +49,8 @@ const FeaturedMediaHighlights = () => {
                     author: item.sourceName,
                     comments: "Media Coverage",
                     title: item.name,
+                       imagePreview: item.imagePreview,
+                      briefIntro: item.briefIntro,
                     description: item.description,
                     link: item.link,
                   }}

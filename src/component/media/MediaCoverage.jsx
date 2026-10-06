@@ -48,6 +48,8 @@ const MediaCoverage = () => {
                     ),
                     author: item.sourceName,
                     comments: "Media Coverage",
+                     imagePreview: item.imagePreview,
+                      briefIntro: item.briefIntro,
                     title: item.name,
                     description: item.description,
                     link: item.link,
