@@ -4556,7 +4556,7 @@ text-transform: capitalize;
   position: relative;
 }
 
-.blogwrap div span{
+.blogcard2 .blogwrap div span{
   color: var(--900, #1A1A1A);
 
 /* Button */
@@ -4570,10 +4570,10 @@ font-weight: 700;
 line-height: 22px; /* 122.222% */
 text-transform: capitalize;
 }
-.blogwrap:hover div{
+.blogcard2 .blogwrap:hover div{
   opacity: 1;
 }
-.blogwrap div{
+.blogcard2 .blogwrap div{
   opacity: 0;
   transition: .3s linear;
   height: 100%;
