@@ -75,8 +75,8 @@ export default function HeroSlider() {
 
                             <div>
                             <h4>PLAN YOUR CAMPAIGN</h4>
-                            <p><a href="#!">+91 22 4969 4802</a></p>
-                            <p><a href="#!"> +91 22 2087 0060</a></p>
+                            <p><a href="tel:9987259878">9987259878</a></p>
+                            <p><a href="tel:9769748281">9769748281</a></p>
                             </div>
                         </div>
                     </div>

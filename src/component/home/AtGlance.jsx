@@ -18,7 +18,7 @@ const AtGlance = () => {
                     <div className="row atroe">
                         <div className="col-lg-6 col-md-6">
                             <div className="atbox" data-gsap>
-                                <h2>200+</h2>
+                                <h2>3000+</h2>
                                 <p>Prime Media Sites</p>
                             </div>
                         </div>
@@ -30,13 +30,13 @@ const AtGlance = () => {
                         </div>
                         <div className="col-lg-6 col-md-6">
                             <div className="atbox" data-gsap>
-                                <h2>200k+</h2>
+                                <h2>2.5k+</h2>
                                 <p>Daily Commuter Reach</p>
                             </div>
                         </div>
                         <div className="col-lg-6 col-md-6">
                             <div className="atbox" data-gsap>
-                                <h2>500+</h2>
+                                <h2>100k+</h2>
                                 <p>Campaigns Delivered</p>
                             </div>
                         </div>

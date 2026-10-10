@@ -153,8 +153,8 @@ const ContactInfo = () => {
                   </div>
                   <div className="continfo">
                     <h3>Phone number</h3>
-                    <a href="#!">+91 22-49694802</a>
-                    <a href="#!">+91 22-20870060</a>
+                    <a href="tel:9987259878">9987259878 </a>
+                    <a href="tel:9769748281">9769748281</a>
                   </div>
                 </div>
               </div>
