@@ -30,7 +30,7 @@ const AtGlance = () => {
                         </div>
                         <div className="col-lg-6 col-md-6">
                             <div className="atbox" data-gsap>
-                                <h2>2.5k+</h2>
+                                <h2>2.5m+</h2>
                                 <p>Daily Commuter Reach</p>
                             </div>
                         </div>
