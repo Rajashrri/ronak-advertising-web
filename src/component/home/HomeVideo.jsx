@@ -1,23 +1,69 @@
-import React from 'react'
-import video from "../../assets/imgs/video.png"
+
+import React, { useState } from "react";
+// import "../../assets/css/HomeVideo.css";
 
 const HomeVideo = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+
+  const handlePlayVideo = () => {
+    setIsPlaying(true);
+  };
+
   return (
-    <div className='p-70'>
-        <div className="custom-container">
-            <div className="homevideo" data-gsap>
-                <img src={video} alt="" />
-                <div className="playbtn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="88" height="88" viewBox="0 0 88 88" fill="none">
-                    <path d="M44 88C68.3005 88 88 68.3005 88 44C88 19.6995 68.3005 0 44 0C19.6995 0 0 19.6995 0 44C0 68.3005 19.6995 88 44 88Z" fill="#DD2B1C"/>
-                    <path d="M58.1683 41.3672L38.894 29.9692C38.4958 29.7287 38.0406 29.5988 37.5754 29.593C37.1102 29.5872 36.6519 29.7056 36.2478 29.9361C35.8437 30.1666 35.5084 30.5008 35.2766 30.9042C35.0449 31.3076 34.925 31.7655 34.9293 32.2307V55.0149C34.9294 55.4784 35.0522 55.9335 35.2851 56.3341C35.5181 56.7347 35.8529 57.0666 36.2555 57.296C36.6582 57.5253 37.1144 57.6441 37.5778 57.6401C38.0412 57.6361 38.4953 57.5096 38.894 57.2733L58.1683 45.884C58.5616 45.6518 58.8876 45.3212 59.1141 44.9246C59.3405 44.528 59.4597 44.0791 59.4597 43.6224C59.4597 43.1657 59.3405 42.7169 59.1141 42.3203C58.8876 41.9237 58.5616 41.593 58.1683 41.3609V41.3672Z" fill="white"/>
-                    </svg>
-                </div>
-            </div>
+    <div className="p-70">
+      <div className="custom-container">
+        <div className="homevideo" data-gsap>
+          {!isPlaying ? (
+            <>
+              {/* Video Thumbnail */}
+              <img
+                src="https://img.youtube.com/vi/opnP1XGdp8s/maxresdefault.jpg"
+                alt="Video thumbnail"
+                className="video-thumbnail"
+              />
 
+              {/* Play Button */}
+              <button
+                type="button"
+                className="playbtn"
+                onClick={handlePlayVideo}
+                aria-label="Play video"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="88"
+                  height="88"
+                  viewBox="0 0 88 88"
+                  fill="none"
+                >
+                  <path
+                    d="M44 88C68.3005 88 88 68.3005 88 44C88 19.6995 68.3005 0 44 0C19.6995 0 0 19.6995 0 44C0 68.3005 19.6995 88 44 88Z"
+                    fill="#DD2B1C"
+                  />
+                  <path
+                    d="M58.1683 41.3672L38.894 29.9692C38.4958 29.7287 38.0406 29.5988 37.5754 29.593C37.1102 29.5872 36.6519 29.7056 36.2478 29.9361C35.8437 30.1666 35.5084 30.5008 35.2766 30.9042C35.0449 31.3076 34.925 31.7655 34.9293 32.2307V55.0149C34.9294 55.4784 35.0522 55.9335 35.2851 56.3341C35.5181 56.7347 35.8529 57.0666 36.2555 57.296C36.6582 57.5253 37.1144 57.6441 37.5778 57.6401C38.0412 57.6361 38.4953 57.5096 38.894 57.2733L58.1683 45.884C58.5616 45.6518 58.8876 45.3212 59.1141 44.9246C59.3405 44.528 59.4597 44.0791 59.4597 43.6224C59.4597 43.1657 59.3405 42.7169 59.1141 42.3203C58.8876 41.9237 58.5616 41.593 58.1683 41.3609V41.3672Z"
+                    fill="white"
+                  />
+                </svg>
+              </button>
+            </>
+          ) : (
+            /* YouTube Video */
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/opnP1XGdp8s?autoplay=1&rel=0"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
+            />
+          )}
         </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default HomeVideo
+export default HomeVideo;
