@@ -4694,9 +4694,9 @@ background: linear-gradient(0deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.25) 10
   .homevideo {
     height: 220px;
   }
-  .homevideo{
+  /* .homevideo{
     height: auto !important ;
-  }
+  } */
 }
 
 
