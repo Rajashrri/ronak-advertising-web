@@ -10,6 +10,11 @@ import videocard1 from "../../assets/imgs/testimonial1.mp4";
 import videocard2 from "../../assets/imgs/testimonial2.mp4";
 import videocard3 from "../../assets/imgs/testimonial3.mp4";
 import videocard4 from "../../assets/imgs/testimonial4.mp4";
+import video1 from "../../assets/imgs/1.jpg";
+import video2 from "../../assets/imgs/2.jpg";
+import video3 from "../../assets/imgs/3.jpg";
+import video4 from "../../assets/imgs/4.jpg";
+import video5 from "../../assets/imgs/5.jpg";
 
 import Heading from "../reuse/Heading";
 
@@ -65,7 +70,7 @@ const PauseIcon = () => {
 
 // ==========================================
 // VIDEO SLIDE
-// ==========================================
+// ==========================================```jsx
 const VideoSlide = ({
   index,
   video,
@@ -75,6 +80,7 @@ const VideoSlide = ({
   handleVideoPlay,
   handleVideoPause,
   handleVideoEnded,
+  thumbnail,
 }) => {
   const isPlaying = playingIndex === index;
 
@@ -92,6 +98,16 @@ const VideoSlide = ({
         onEnded={() => handleVideoEnded(index)}
       />
 
+      {/* Show thumbnail when video is not playing */}
+      {!isPlaying && thumbnail && (
+        <img
+          src={thumbnail}
+          alt="Video thumbnail"
+          className="video-thumbnail"
+        />
+      )}
+
+      {/* Play / Pause Button */}
       <button
         type="button"
         className="playbtn"
@@ -103,6 +119,7 @@ const VideoSlide = ({
     </div>
   );
 };
+
 
 // ==========================================
 // MAIN COMPONENT
@@ -224,12 +241,12 @@ export default function VideoSlider() {
           pagination={{
             clickable: true,
           }}
-          autoplay={{
-            delay: 4000,
-            disableOnInteraction: false,
-          }}
-          loop={true}
-          speed={800}
+          // autoplay={{
+          //   delay: 4000,
+          //   disableOnInteraction: false,
+          // }}
+          // loop={true}
+          // speed={800}
           className="videoslidermain"
           onSwiper={(swiper) => {
             swiperRef.current = swiper;
@@ -244,6 +261,7 @@ export default function VideoSlider() {
           <SwiperSlide>
             <VideoSlide
               index={0}
+              thumbnail={video1}
               video={videocard}
               videoRefs={videoRefs}
               playingIndex={playingIndex}
@@ -262,6 +280,7 @@ export default function VideoSlider() {
             <VideoSlide
               index={1}
               video={videocard1}
+                   thumbnail={video2}
               videoRefs={videoRefs}
               playingIndex={playingIndex}
               handlePlayPause={handlePlayPause}
@@ -278,6 +297,7 @@ export default function VideoSlider() {
           <SwiperSlide>
             <VideoSlide
               index={2}
+              thumbnail={video3}
               video={videocard2}
               videoRefs={videoRefs}
               playingIndex={playingIndex}
@@ -296,6 +316,7 @@ export default function VideoSlider() {
             <VideoSlide
               index={3}
               video={videocard3}
+                   thumbnail={video4}
               videoRefs={videoRefs}
               playingIndex={playingIndex}
               handlePlayPause={handlePlayPause}
@@ -313,6 +334,7 @@ export default function VideoSlider() {
             <VideoSlide
               index={4}
               video={videocard4}
+                   thumbnail={video5}
               videoRefs={videoRefs}
               playingIndex={playingIndex}
               handlePlayPause={handlePlayPause}

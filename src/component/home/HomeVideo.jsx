@@ -1,5 +1,7 @@
 
 import React, { useState } from "react";
+// Owner-video-Thumbnail
+import OwnervideoThumbnail from "../../assets/imgs/Owner-video-Thumbnail.jpg";
 // import "../../assets/css/HomeVideo.css";
 
 const HomeVideo = () => {
@@ -17,7 +19,7 @@ const HomeVideo = () => {
             <>
               {/* Video Thumbnail */}
               <img
-                src="https://img.youtube.com/vi/opnP1XGdp8s/maxresdefault.jpg"
+                src={OwnervideoThumbnail}
                 alt="Video thumbnail"
                 className="video-thumbnail"
               />
