@@ -70,15 +70,15 @@ export default function LocationSlider() {
                     <a href={`/location/${item.slug}`} className="location-card">
                       <div className="locadeta">
                         <div className="locacrad">
-                          <h4>70+</h4>
+                          <h4>{item.billboards}</h4>
                           <p>billboards</p>
                         </div>
                         <div className="locacrad">
-                          <h4>10+</h4>
+                          <h4>{item.brands}</h4>
                           <p>Brands in Last Year</p>
                         </div>
                         <div className="locacrad">
-                          <h4>5Lakh+</h4>
+                          <h4>{item.totaleye}</h4>
                           <p>Total eye balls in a day</p>
                         </div>
                       </div>
@@ -98,15 +98,15 @@ export default function LocationSlider() {
 
                         <div className="locadeta">
                           <div className="locacrad">
-                            <h4>70+</h4>
+                            <h4>{item.billboards}</h4>
                             <p>billboards</p>
                           </div>
                           <div className="locacrad">
-                            <h4>10+</h4>
+                            <h4>{item.brands}</h4>
                             <p>Brands in Last Year</p>
                           </div>
                           <div className="locacrad">
-                            <h4>5Lakh+</h4>
+                            <h4>{item.totaleye}</h4>
                             <p>Total eye balls in a day</p>
                           </div>
                         </div>
