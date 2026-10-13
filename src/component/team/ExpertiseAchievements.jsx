@@ -10,8 +10,9 @@ const ExpertiseAchievements = () => {
             <div className="achievements-container">
                 <Heading
                     title="OUTDOOR ADVERTISING THAT DELIVERS"
-                    // subtitle="Latest Blog"
-                    titleclass="text-black text-center"
+                    subtitle="RONAK AT A GLANCE"
+             titleclass="text-black text-center"
+          className="text-center"
                 />
                 <div className="row">
                     <div className="col-lg-7">

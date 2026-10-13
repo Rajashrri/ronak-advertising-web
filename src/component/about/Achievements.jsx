@@ -10,9 +10,10 @@ const Achievements = () => {
         <div className='p-70'>
             <div className="achievements-container">
                 <Heading
-                    title="OUTDOOR ADVERTISING THAT DELIVERS"
-                    // subtitle="Latest Blog"
-                    titleclass="text-black text-center"
+                            title="OUTDOOR ADVERTISING THAT DELIVERS"
+                    subtitle="RONAK AT A GLANCE"
+             titleclass="text-black text-center"
+          className="text-center"
                 />
                 <div className="row">
                     <div className="col-lg-7 col-md-6" data-gsap>
