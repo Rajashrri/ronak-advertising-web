@@ -3,7 +3,7 @@ import React, { useRef, useState } from "react";
 
 // Owner-video-Thumbnail
 import OwnervideoThumbnail from "../../assets/imgs/Owner-video-Thumbnail.jpg";
-import v1 from "../../assets/imgs/v1.mp4";
+import v1 from "../../assets/imgs/v1.webm";
 
 const HomeVideo = () => {
   const [isPlaying, setIsPlaying] = useState(false);
