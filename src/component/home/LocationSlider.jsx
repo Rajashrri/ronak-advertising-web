@@ -67,35 +67,11 @@ export default function LocationSlider() {
             ? locations.map((item, index) => (
                 <SwiperSlide key={index}>
                   <div className="location-grid">
-                    <a href={`/location/${item.slug}`} className="location-card">
-                      <div className="locadeta">
-                        <div className="locacrad">
-                          <h4>{item.billboards}</h4>
-                          <p>billboards</p>
-                        </div>
-                        <div className="locacrad">
-                          <h4>{item.brands}</h4>
-                          <p>Brands in Last Year</p>
-                        </div>
-                        <div className="locacrad">
-                          <h4>{item.totaleye}</h4>
-                          <p>Total eye balls in a day</p>
-                        </div>
-                      </div>
-
-                      <img src={item.image} alt={item.locationName} />
-                      <div className="overlay"></div>
-                      <h3>{item.locationName}</h3>
-                    </a>
-                  </div>
-                </SwiperSlide>
-              ))
-            : desktopSlides.map((group, index) => (
-                <SwiperSlide key={index}>
-                  <div className="location-grid">
-                    {group.map((item, i) => (
-                      <a href={`/location/${item.slug}`} className="location-card" key={i}>
-
+                    <a
+                      href={`/location/${item.slug}`}
+                      className="location-card"
+                    >
+                      {(item.billboards || item.brands || item.totaleye) && (
                         <div className="locadeta">
                           <div className="locacrad">
                             <h4>{item.billboards}</h4>
@@ -110,6 +86,41 @@ export default function LocationSlider() {
                             <p>Total eye balls in a day</p>
                           </div>
                         </div>
+                      )}
+                      <img src={item.image} alt={item.locationName} />
+                      <div className="overlay"></div>
+                      <h3>{item.locationName}</h3>
+                    </a>
+                  </div>
+                </SwiperSlide>
+              ))
+            : desktopSlides.map((group, index) => (
+                <SwiperSlide key={index}>
+                  <div className="location-grid">
+                    {group.map((item, i) => (
+                      <a
+                        href={`/location/${item.slug}`}
+                        className="location-card"
+                        key={i}
+                      >
+                        {(item.billboards || item.brands || item.totaleye) && (
+                          <div className="locadeta">
+                            <div className="locacrad">
+                              <h4>{item.billboards}</h4>
+                              <p>billboards</p>
+                            </div>
+
+                            <div className="locacrad">
+                              <h4>{item.brands}</h4>
+                              <p>Brands in Last Year</p>
+                            </div>
+
+                            <div className="locacrad">
+                              <h4>{item.totaleye}</h4>
+                              <p>Total eye balls in a day</p>
+                            </div>
+                          </div>
+                        )}
                         <img src={item.image} alt={item.locationName} />
                         <div className="overlay"></div>
                         <h3>{item.locationName}</h3>
